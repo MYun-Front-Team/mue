@@ -1,28 +1,25 @@
 <template>
   <div id="app">
-    <hello></hello>
+    <m-header-demo></m-header-demo>
   </div>
 </template>
 
 <script>
-  import Hello from './demo/Hello.vue'
+  import MHeaderDemo from './demo/MHeader.vue'
   export default {
     name: 'app',
     components: {
-      Hello
+      MHeaderDemo
     },
     methods: {
     }
   }
 </script>
 
-<style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+<style lang="less">
+  @import './styles/reset.less';
+
+  body {
+    background-color: #fbf9fe;
   }
 </style>

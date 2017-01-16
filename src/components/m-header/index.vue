@@ -2,8 +2,7 @@
   <div class="mue-header">
     <div class="mue-header-left">
       <a class="mue-header-back" v-show="leftOptions.showBack" :transition="transition"
-         @click.prevent.stop="onClickBack">{{leftOptions.backText}}
-      </a>
+         @click.prevent.stop="onClickBack">{{leftOptions.backText}}</a>
       <div class="left-arrow" @click="onClickBack" v-show="leftOptions.showBack" :transition="transition"></div>
       <slot name="left"></slot>
     </div>
@@ -117,8 +116,21 @@
     top: -5px;
     left: -5px;
 
-  &
-  :before {
+    &
+    :before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border: 1px solid @header-arrow-color;
+      border-width: 1px 0 0 1px;
+      transform: rotate(315deg);
+      top: 8px;
+      left: 7px;
+    }
+  }
+
+  .mue-header .mue-header-left .left-arrow:before {
     content: "";
     position: absolute;
     width: 12px;
@@ -128,8 +140,6 @@
     transform: rotate(315deg);
     top: 8px;
     left: 7px;
-  }
-
   }
   .mue-header .mue-header-right {
     right: 15px
