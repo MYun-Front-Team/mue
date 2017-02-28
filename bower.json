@@ -1,0 +1,34 @@
+{
+  "name": "mue",
+  "description": "MYun Mobile web UI based on Vue and Weui",
+  "main": "mue.js",
+  "authors": [
+    "joneqian <qian.qing@aliyun.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "mue",
+    "vue",
+    "weui",
+    "weex",
+    "vue-components",
+    "web-components",
+    "component",
+    "components",
+    "mobile",
+    "ui",
+    "framework",
+    "frontend"
+  ],
+  "homepage": "https://github.com/MYun-Front-Team/mue",
+  "ignore": [
+    "src",
+    "assets",
+    ".github",
+    "build",
+    "examples",
+    "node_modules",
+    "bower_components",
+    "test"
+  ]
+}
