@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <m-button-demo></m-button-demo>
+    <!--<m-timeline-demo></m-timeline-demo>-->
+    <a href="Mbutton/">Button</a>
   </div>
 </template>
 
 <script>
-  import MButtonDemo from './demo/MButton.vue'
   export default {
     name: 'app',
     components: {
-      MButtonDemo
+
     },
     methods: {
     }
