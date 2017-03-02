@@ -2,8 +2,24 @@
 
 @color-wechat-green: #04BE02;
 
-@theme-color: #04BE02;
+@theme-color: #ffba00;
 @opacity-disabled: 0.5;
+
+
+/**
+* actionsheet
+*/
+@actionsheet-label-primary-color: #1AAD19;
+@actionsheet-label-warn-color: #E64340;
+@actionsheet-label-default-color: #000;
+@actionsheet-label-disabled-color: #ccc;
+
+/**
+* datetime
+*/
+@datetime-header-item-font-color: @theme-color;
+@datetime-header-item-cancel-font-color: @datetime-header-item-font-color;
+@datetime-header-item-confirm-font-color: @datetime-header-item-font-color;
 
 /**
 * tabbar
@@ -29,6 +45,11 @@
 */
 @number-button-font-color: #3cc51f;
 @number-input-font-color: #666;
+@number-button-enabled-border-color: #ececec;
+@number-square-button-enabled-border-color: @number-button-enabled-border-color;
+@number-round-button-enabled-border-color: @number-button-font-color;
+@number-button-disabled-border-color: @number-button-enabled-border-color;
+@number-round-button-disabled-border-color: @number-button-enabled-border-color;
 
 /**
 * checkbox
@@ -85,8 +106,36 @@
 /**
 * Button
 */
-@button-warn-bg-color: #EF4F4F;
-@button-warn-active-color: #C13E3E;
+
+@button-global-border-radius: .05rem;
+@button-global-font-color: #FFFFFF;
+@button-global-margin-top: .2rem;
+@button-global-height: .76rem;
+@button-global-disabled-font-color: rgba(255,255,255,.6);
+@button-global-active-font-color: rgba(255,255,255,.6);
+@button-global-font-size: .28rem;
+
+@button-warn-bg-color: #ff3000;
+@button-warn-active-color: #ff3000;
+
+@button-default-bg-color: #f5f5f5;
+@button-default-font-color: #333;
+@button-default-active-bg-color: #f5f5f5;
+@button-default-disabled-font-color: rgba(0,0,0,.3);
+@button-default-active-font-color: rgba(0,0,0,.6);
+
+@button-primary-bg-color: #ffba00;
+@button-primary-active-bg-color: #ffba00;
+
+/**
+* swipeout
+*/
+@swipeout-button-primary-bg-color: @button-primary-bg-color;
+@swipeout-button-warn-bg-color: @button-warn-bg-color;
+@swipeout-button-default-bg-color: #c8c7cd;
+
+@swipeout-content-bg-color: #FFF;
+@swipeout-button-font-color: #FFF;
 
 /**
 * Cell
@@ -109,9 +158,22 @@
 /**
 * Button tab
 */
-@button-tab-active-border-color: @color-wechat-green;
+@button-tab-border-width: 1px;
+@button-tab-border-radius: 16px;
+
+@button-tab-border-color: @theme-color;
+@button-tab-default-border-color: @button-tab-border-color;
+@button-tab-active-border-color: @button-tab-border-color;
+
+@button-tab-default-background-color: #fdfdfd;
 @button-tab-active-background-color: @color-wechat-green;
-@button-tab-active-font-color: #FFF;
+
+@button-tab-active-font-color: #FFF; /* alias */
+@button-tab-active-text-color: @button-tab-active-font-color;
+@button-tab-default-text-color: #999;
+
+@button-tab-height: 30px;
+@button-tab-line-height: 31px;
 
 /**
 * Swiper

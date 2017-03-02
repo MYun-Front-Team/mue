@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <m-flex-box-demo></m-flex-box-demo>
+    <m-button-demo></m-button-demo>
   </div>
 </template>
 
 <script>
-  import MFlexBoxDemo from './demo/MFlexBox.vue'
+  import MButtonDemo from './demo/MButton.vue'
   export default {
     name: 'app',
     components: {
-      MFlexBoxDemo
+      MButtonDemo
     },
     methods: {
     }
