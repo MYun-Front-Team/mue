@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!--<m-timeline-demo></m-timeline-demo>-->
-    <a href="Mbutton/">Button</a>
+    <router-link to="/Mbutton">Mbutton</router-link>
   </div>
 </template>
 
@@ -13,7 +13,7 @@
     },
     methods: {
     }
-  }
+  };
 </script>
 
 <style lang="less">

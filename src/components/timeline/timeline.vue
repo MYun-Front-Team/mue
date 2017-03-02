@@ -17,15 +17,15 @@ export default {
   },
   methods: {
     setChildProps () {
-      if (!this.$children) return
-      const len = this.$children.length
+      if (!this.$children) return;
+      const len = this.$children.length;
       this.$children.forEach((child, index) => {
-        child.isLast = index === len - 1
-        child.isFirst = index === 0
-      })
+        child.isLast = index === len - 1;
+        child.isFirst = index === 0;
+      });
     }
   }
-}
+};
 </script>
 
 <style lang="less">

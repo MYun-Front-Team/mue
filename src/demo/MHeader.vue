@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import MHeader from '../components/m-header/index.vue'
+  import MHeader from '../components/m-header/index.vue';
 
   export default {
     components: {
@@ -29,9 +29,9 @@
     },
     data () {
       return {
-      }
+      };
     }
-  }
+  };
 </script>
 
 <style>

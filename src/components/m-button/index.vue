@@ -29,10 +29,10 @@ export default {
         this.plain ? `weui-btn_plain-${this.type}` : '',
         this.showLoading ? `weui-btn_loading` : '',
         this.circle ? `weui-btn_circle-${this.type}` : ''
-      ]
+      ];
     }
   }
-}
+};
 </script>
 
 <style lang="less">
