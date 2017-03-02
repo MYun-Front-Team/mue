@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <m-header-demo></m-header-demo>
+    <m-flex-box-demo></m-flex-box-demo>
   </div>
 </template>
 
 <script>
-  import MHeaderDemo from './demo/MHeader.vue'
+  import MFlexBoxDemo from './demo/MFlexBox.vue'
   export default {
     name: 'app',
     components: {
-      MHeaderDemo
+      MFlexBoxDemo
     },
     methods: {
     }
@@ -20,6 +20,6 @@
   @import './styles/reset.less';
 
   body {
-    background-color: #fbf9fe;
+    background-color: #efeff4;
   }
 </style>
