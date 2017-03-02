@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <!--<m-timeline-demo></m-timeline-demo>-->
-    <router-link to="/Mbutton">Mbutton</router-link>
+    <router-view class="router-view"></router-view>
   </div>
 </template>
 

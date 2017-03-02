@@ -1,32 +1,66 @@
 /**
  * Created by qianqing on 2017/3/2.
  */
-import App from './App.vue';
-import MButton from './demo/MButton.vue';
-import MFlexBox from './demo/MFlexBox.vue';
-import MHeader from './demo/MHeader.vue';
-import MTimeLine from './demo/MTimeLine.vue';
-
 const routers = [
   {
     path: '/',
-    component: App
-  },
-  {
-    path: '/MButton',
-    component: MButton
-  },
-  {
-    path: '/MFlexBox',
-    component: MFlexBox
-  },
-  {
-    path: '/MHeader',
-    component: MHeader
-  },
-  {
-    path: '/MTimeLine',
-    component: MTimeLine
+    name: 'index',
+    component(resolve) {
+      require.ensure(['./App.vue'], () => {
+        resolve(require('./App.vue'));
+      });
+    },
+    children: [
+      {
+        path: '',
+        redirect: '/Demo'
+      },
+      {
+        path: 'Demo',
+        name: 'Demo',
+        component(resolve) {
+          require.ensure(['./demo/Demo.vue'], () => {
+            resolve(require('./demo/Demo.vue'));
+          });
+        }
+      },
+      {
+        path: 'MButton',
+        name: 'MButton',
+        component(resolve) {
+          require.ensure(['./demo/MButton.vue'], () => {
+            resolve(require('./demo/MButton.vue'));
+          });
+        }
+      },
+      {
+        path: 'MFlexBox',
+        name: 'MFlexBox',
+        component(resolve) {
+          require.ensure(['./demo/MFlexBox.vue'], () => {
+            resolve(require('./demo/MFlexBox.vue'));
+          });
+        }
+      },
+      {
+        path: 'MHeader',
+        name: 'MHeader',
+        component(resolve) {
+          require.ensure(['./demo/MHeader.vue'], () => {
+            resolve(require('./demo/MHeader.vue'));
+          });
+        }
+      },
+      {
+        path: 'MTimeLine',
+        name: 'MTimeLine',
+        component(resolve) {
+          require.ensure(['./demo/MTimeLine.vue'], () => {
+            resolve(require('./demo/MTimeLine.vue'));
+          });
+        }
+      }
+    ]
   }
 ];
 
