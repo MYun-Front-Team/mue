@@ -58,18 +58,16 @@
 
   .mue-header {
     position: relative;
-    padding: 3px 0;
     box-sizing: border-box;
     background-color: @header-background-color;
   }
 
   .mue-header .mue-header-title, .mue-header h1 {
-    margin: 0 88px;
-    margin-left: 100px;
-    line-height: 40px;
+    margin: 0 1.5rem;
+    line-height: .8rem;
     text-align: center;
-    height: 40px;
-    font-size: 18px;
+    height: .8rem;
+    font-size: .28rem;
     font-weight: 400;
     width: auto;
     overflow: hidden;
@@ -84,10 +82,10 @@
 
   .mue-header .mue-header-left, .mue-header .mue-header-right {
     position: absolute;
-    top: 14px;
+    top: .22rem;
     display: block;
-    font-size: 14px;
-    line-height: 21px;
+    font-size: .24rem;
+    line-height: .38rem;
     color: @header-text-color;
   }
 
@@ -102,57 +100,56 @@
   }
 
   .mue-header .mue-header-left {
-    left: 18px
+    left: .32rem
   }
 
   .mue-header .mue-header-left .mue-header-back {
-    padding-left: 16px
+    padding-left: .38rem
   }
 
   .mue-header .mue-header-left .left-arrow {
     position: absolute;
-    width: 30px;
-    height: 30px;
-    top: -5px;
-    left: -5px;
+    width: .38rem;
+    height: .38rem;
+
 
     &
     :before {
       content: "";
       position: absolute;
-      width: 12px;
-      height: 12px;
+      width: .22rem;
+      height: .22rem;
       border: 1px solid @header-arrow-color;
       border-width: 1px 0 0 1px;
       transform: rotate(315deg);
-      top: 8px;
-      left: 7px;
+      top: .06rem;
+      left: .06rem;
     }
   }
 
   .mue-header .mue-header-left .left-arrow:before {
     content: "";
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: .22rem;
+    height: .22rem;
     border: 1px solid @header-arrow-color;
     border-width: 1px 0 0 1px;
     transform: rotate(315deg);
-    top: 8px;
-    left: 7px;
+    top: .06rem;
+    left: .06rem;
   }
   .mue-header .mue-header-right {
-    right: 15px
+    right: .32rem
   }
 
   .mue-header .mue-header-right a, .mue-header .mue-header-right button {
-    margin-left: 8px;
+    margin-left: .2rem;
     margin-right: 0
   }
 
   .mue-header .mue-header-right .mue-header-more:after {
     content: "\2022\0020\2022\0020\2022\0020";
-    font-size: 16px;
+    font-size: .25rem;
   }
 
   .mue-header-fade-in-right-enter {
@@ -166,7 +163,7 @@
   @keyframes fadeinR {
     0% {
       opacity: 0;
-      transform: translateX(80px);
+      transform: translateX(.8rem);
     }
     100% {
       opacity: 1;
@@ -177,7 +174,7 @@
   @keyframes fadeinL {
     0% {
       opacity: 0;
-      transform: translateX(-80px);
+      transform: translateX(-.8rem);
     }
     100% {
       opacity: 1;
