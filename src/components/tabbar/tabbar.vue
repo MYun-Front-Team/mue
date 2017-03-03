@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/weui/widget/weui_tab/vux-tabbar.less';
+@import '../../styles/weui/widget/weui_tab/m-tabbar.less';
 @import '../../styles/reddot.less';
 
 .weui-tabbar__icon {
@@ -25,18 +25,18 @@ export default {
 }
 .weui-tabbar__icon > sup {
   position: absolute;
-  top: -8px;
-  left: 100%;
+  top: 10%;
+  left: 90%;
   transform: translateX(-50%);
   z-index: 102;
 }
-.weui-tabbar__item.vux-tabbar-simple {
+.weui-tabbar__item.m-tabbar-simple {
   padding: 0;
-  height: 50px;
-  line-height: 50px;
+  height: .82rem;
+  line-height: .82rem;
 }
-.vux-tabbar-simple .weui-tabbar__label {
-  font-size: 14px;
-  line-height: 50px;
+.m-tabbar-simple .weui-tabbar__label {
+  font-size: .24rem;
+  line-height: .82rem;
 }
 </style>

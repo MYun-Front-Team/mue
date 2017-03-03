@@ -1,6 +1,6 @@
 <template>
-  <a href="javascript:;" class="weui-tabbar__item" :class="{'weui-bar__item_on': $parent.index === currentIndex, 'vux-tabbar-simple': simple}" @click="onItemClick(true)">
-    <div class="weui-tabbar__icon" :class="[iconClass || $parent.iconClass, {'vux-reddot': showDot}]" v-if="!simple">
+  <a href="javascript:;" class="weui-tabbar__item" :class="{'weui-bar__item_on': $parent.index === currentIndex, 'm-tabbar-simple': simple}" @click="onItemClick(true)">
+    <div class="weui-tabbar__icon" :class="[iconClass || $parent.iconClass, {'m-reddot': showDot}]" v-if="!simple">
       <slot name="icon"></slot>
       <sup><badge v-if="badge" :text="badge"></badge></sup>
     </div>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-// import { childMixin } from '../../styles/weui/base/mixins/multi-items';
+import { childMixin } from '../../mixins/multi-items';
 import Badge from '../badge/index.vue';
 
 export default {
@@ -23,7 +23,7 @@ export default {
       this.simple = true;
     }
   },
-  // mixins: [childMixin],
+  mixins: [childMixin],
   props: {
     showDot: {
       type: Boolean,
