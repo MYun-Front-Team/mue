@@ -9,10 +9,10 @@ export default {
   },
   computed: {
     className () { // compatible with old type param
-      return `weui-icon weui_icon_${this.type} weui-icon-${this.type.replace(/_/g, '-')}`;
+      return `weui-icon weui_icon_${this.type} weui-icon-${this.type.replace(/_/g, '-')}`
     }
   }
-};
+}
 </script>
 
 <style lang="less">

@@ -24,9 +24,9 @@
 
 
 <script>
-  import Step from '../components/step/step.vue';
-  import StepItem from '../components/step/step-item.vue';
-  import MButton from '../components/m-button/index';
+  import Step from '../components/step/step.vue'
+  import StepItem from '../components/step/step-item.vue'
+  import MButton from '../components/m-button/index'
 
   export default {
     components: {
@@ -38,14 +38,14 @@
       return {
         step1: 1,
         step2: 0
-      };
+      }
     },
     methods: {
       nextStep () {
-        this.step2 ++;
+        this.step2 ++
       }
     }
-  };
+  }
 </script>
 
 <style lang="less">

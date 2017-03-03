@@ -27,9 +27,9 @@
 </template>
 
 <script>
-  import Timeline from '../components/timeline/timeline.vue';
-  import TimelineItem from '../components/timeline/timeline-item.vue';
-  import MButton from '../components/m-button/index';
+  import Timeline from '../components/timeline/timeline.vue'
+  import TimelineItem from '../components/timeline/timeline-item.vue'
+  import MButton from '../components/m-button/index'
 
   export default {
     components: {
@@ -40,9 +40,9 @@
     data () {
       return {
         count: 3
-      };
+      }
     }
-  };
+  }
 </script>
 
 <style lang="less">

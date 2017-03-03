@@ -110,9 +110,9 @@
 </template>
 
 <script>
-  import Flexbox from '../components/flexbox/flexbox';
-  import FlexboxItem from '../components/flexbox/flexbox-item';
-  import Divider from '../components/divider/index';
+  import Flexbox from '../components/flexbox/flexbox'
+  import FlexboxItem from '../components/flexbox/flexbox-item'
+  import Divider from '../components/divider/index'
 
   export default {
     components: {
@@ -120,7 +120,7 @@
       FlexboxItem,
       Divider
     }
-  };
+  }
 
 </script>
 

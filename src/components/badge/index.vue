@@ -7,7 +7,7 @@ export default {
   props: {
     text: [String, Number]
   }
-};
+}
 </script>
 
 <style lang="less">

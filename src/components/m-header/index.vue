@@ -27,7 +27,7 @@
             showBack: true,
             backText: 'Back',
             preventGoBack: false
-          };
+          }
         }
       },
       title: String,
@@ -37,20 +37,20 @@
         default () {
           return {
             showMore: false
-          };
+          }
         }
       }
     },
     methods: {
       onClickBack () {
         if (this.leftOptions.preventGoBack) {
-          this.$emit('on-click-back');
+          this.$emit('on-click-back')
         } else {
-          window.history.back();
+          window.history.back()
         }
       }
     }
-  };
+  }
 </script>
 
 <style lang="less">

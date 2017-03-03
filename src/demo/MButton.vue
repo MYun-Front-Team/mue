@@ -74,10 +74,10 @@
 
 
 <script>
-  import MButton from '../components/m-button/index.vue';
-  import Flexbox from '../components/flexbox/flexbox';
-  import FlexboxItem from '../components/flexbox/flexbox-item';
-  import Divider from '../components/divider/index';
+  import MButton from '../components/m-button/index.vue'
+  import Flexbox from '../components/flexbox/flexbox'
+  import FlexboxItem from '../components/flexbox/flexbox-item'
+  import Divider from '../components/divider/index'
 
   export default {
     components: {
@@ -88,20 +88,20 @@
     },
     methods: {
       change (value) {
-        console.log('change:', value);
+        console.log('change:', value)
       },
       processButton001 () {
-        this.submit001 = 'processing';
-        this.disable001 = true;
+        this.submit001 = 'processing'
+        this.disable001 = true
       }
     },
     data () {
       return {
         submit001: 'click me',
         disable001: false
-      };
+      }
     }
-  };
+  }
 </script>
 
 
