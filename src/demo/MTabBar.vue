@@ -22,9 +22,9 @@
 </template>
 
 <script>
-  import Tabbar from '../components/tabbar/tabbar.vue';
-  import TabbarItem from '../components/tabbar/tabbar-item.vue';
-  import Icon from '../components/icon/index.vue';
+  import Tabbar from '../components/tabbar/tabbar.vue'
+  import TabbarItem from '../components/tabbar/tabbar-item.vue'
+  import Icon from '../components/icon/index.vue'
 
   export default {
     components: {
@@ -32,7 +32,7 @@
       TabbarItem,
       Icon
     }
-  };
+  }
 </script>
 <style>
   .weui-tabbar__icon .weui-icon{ font-size: inherit !important;}

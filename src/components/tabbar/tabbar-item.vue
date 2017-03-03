@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import { childMixin } from '../../mixins/multi-items';
-import Badge from '../badge/index.vue';
+import { childMixin } from '../../mixins/multi-items'
+import Badge from '../badge/index.vue'
 
 export default {
   components: {
@@ -20,7 +20,7 @@ export default {
   },
   created () {
     if (!this.$slots.icon) {
-      this.simple = true;
+      this.simple = true
     }
   },
   mixins: [childMixin],
@@ -36,7 +36,7 @@ export default {
   data () {
     return {
       simple: false
-    };
+    }
   }
-};
+}
 </script>

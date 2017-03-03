@@ -89,7 +89,7 @@ const childMixin = {
     return {
       currentIndex: -1,
       currentSelected: this.selected
-    };
+    }
   }
 }
 
