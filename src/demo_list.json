@@ -2,5 +2,6 @@
   "MHeader",
   "MFlexBox",
   "MTimeLine",
-  "MButton"
+  "MButton",
+  "MStep"
 ]

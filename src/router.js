@@ -59,6 +59,24 @@ const routers = [
             resolve(require('./demo/MTimeLine.vue'));
           });
         }
+      },
+      {
+        path: 'MStep',
+        name: 'MStep',
+        component(resolve) {
+          require.ensure(['./demo/MStep.vue'], () => {
+            resolve(require('./demo/MStep.vue'));
+          });
+        }
+      },
+      {
+        path: 'MTabBar',
+        name: 'MTabBar',
+        component(resolve) {
+          require.ensure(['./demo/MTabBar.vue'], () => {
+            resolve(require('./demo/MTabBar.vue'));
+          });
+        }
       }
     ]
   }
