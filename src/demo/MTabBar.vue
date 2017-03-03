@@ -22,13 +22,13 @@
 </template>
 
 <script>
-  import Tabbar from '../components/tabbar/tabbar.vue';
-  import TabbarItem from '../components/tabbar/tabbar-item.vue';
+  import Tabbar from '../components/tabbar/tabbar.vue'
+  import TabbarItem from '../components/tabbar/tabbar-item.vue'
 
   export default {
     components: {
       Tabbar,
       TabbarItem
     }
-  };
+  }
 </script>

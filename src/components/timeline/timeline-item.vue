@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Icon from '../icon/index.vue';
+import Icon from '../icon/index.vue'
 
 export default {
   data () {
@@ -19,26 +19,26 @@ export default {
       isLast: true,
       isFirst: true,
       headStyle: { backgroundColor: this.$parent.color }
-    };
+    }
   },
   mounted () {
-    this.$parent.setChildProps();
+    this.$parent.setChildProps()
   },
   beforeDestroy () {
     // this will be null
-    const $parent = this.$parent;
+    const $parent = this.$parent
     this.$nextTick(() => {
-      $parent.setChildProps();
-    });
+      $parent.setChildProps()
+    })
   },
   components: {
     Icon
   },
   computed: {
     tailStyle () {
-      return this.isLast ? { display: 'none', backgroundColor: this.$parent.color } : { display: 'block', backgroundColor: this.$parent.color };
+      return this.isLast ? { display: 'none', backgroundColor: this.$parent.color } : { display: 'block', backgroundColor: this.$parent.color }
     }
   }
-};
+}
 </script>
 

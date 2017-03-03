@@ -6,14 +6,14 @@
 
 <script>
 
-import { parentMixin } from '../../mixins/multi-items';
+import { parentMixin } from '../../mixins/multi-items'
 
 export default {
   mixins: [parentMixin],
   props: {
     iconClass: String
   }
-};
+}
 </script>
 
 <style lang="less">

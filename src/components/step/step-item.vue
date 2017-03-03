@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Icon from '../icon/index.vue';
+import Icon from '../icon/index.vue'
 
 export default {
   props: {
@@ -31,23 +31,23 @@ export default {
   },
   computed: {
     iconName () {
-      return this.icon || 'check';
+      return this.icon || 'check'
     }
   },
   created () {
-    this.currentStatus = this.status;
-    this.currentStepLast = this.stepLast;
-    this.currentStepNumber = this.stepNumber;
+    this.currentStatus = this.status
+    this.currentStepLast = this.stepLast
+    this.currentStepNumber = this.stepNumber
   },
   data () {
     return {
       currentStatus: '',
       currentStepLast: false,
       currentStepNumber: 0
-    };
+    }
   },
   components: {
     Icon
   }
-};
+}
 </script>

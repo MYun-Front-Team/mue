@@ -31,11 +31,11 @@ export default {
         '-webkit-flex-wrap': this.wrap,
         'flex-direction': this.direction,
         '-webkit-flex-direction': this.direction
-      };
-      return styles;
+      }
+      return styles
     }
   }
-};
+}
 </script>
 
 <style lang="less">

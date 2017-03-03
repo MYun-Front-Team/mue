@@ -5,7 +5,7 @@
 </template>
 
 <script>
-const prefixList = ['-moz-box-', '-webkit-box-', ''];
+const prefixList = ['-moz-box-', '-webkit-box-', '']
 
 export default {
   props: {
@@ -16,36 +16,36 @@ export default {
     buildWidth (width) {
       if (typeof width === 'number') {
         if (width < 1) {
-          return width;
+          return width
         } else {
-          return width / 12;
+          return width / 12
         }
       } else if (typeof width === 'string') {
-        return width.replace('px', '') / this.bodyWidth;
+        return width.replace('px', '') / this.bodyWidth
       }
     }
   },
   computed: {
     style () {
-      let styles = {};
-      let marginName = this.$parent.orient === 'horizontal' ? 'marginLeft' : 'marginTop';
-      styles[marginName] = `${this.$parent.gutter}px`;
+      let styles = {}
+      let marginName = this.$parent.orient === 'horizontal' ? 'marginLeft' : 'marginTop'
+      styles[marginName] = `${this.$parent.gutter}px`
 
       if (this.span) {
         for (let i = 0; i < prefixList.length; i++) {
-          styles[prefixList[i] + 'flex'] = `0 0 ${this.buildWidth(this.span) * 100}%`;
+          styles[prefixList[i] + 'flex'] = `0 0 ${this.buildWidth(this.span) * 100}%`
         }
       }
       if (typeof this.order !== 'undefined') {
-        styles.order = this.order;
+        styles.order = this.order
       }
-      return styles;
+      return styles
     }
   },
   data () {
     return {
       bodyWidth: document.documentElement.offsetWidth
-    };
+    }
   }
-};
+}
 </script>
