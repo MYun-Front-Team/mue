@@ -7,10 +7,14 @@
     <router-link to="/MTimeLine">MTimeLine</router-link>
     <router-link to="/MStep">MStep</router-link>
     <router-link to="/MTabBar">MTabBar</router-link>
+    <router-link to="/MSearch">MSearch</router-link>
   </div>
 </template>
 
-<style></style>
+<style>
+  #app{ padding: .24rem;}
+  .router-view a{ float: left; width: 25%; padding-bottom: .24rem;}
+</style>
 
 <script>
   export default {
