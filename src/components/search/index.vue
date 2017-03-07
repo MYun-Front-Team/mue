@@ -1,6 +1,6 @@
 <template>
   <div class="m-search-box" :class="{'m-search-fixed':isFixed}" :style="{top: isFixed ? top : '', position: fixPosition }">
-    <div class="weui-search-bar" :class="{'weui-search-bar_focusing': !isCancel || currentValue}">
+    <div class="weui-search-bar" :class="{'weui-search-bar_focusing': !isCancel || currentValue || !label}">
       <form class="weui-search-bar__form" @submit.prevent="$emit('on-submit', value)">
         <div class="m-search-mask" @click="touch" v-show="!isFixed && autoFixed"></div>
         <div class="weui-search-bar__box">
@@ -10,12 +10,13 @@
           @blur="onBlur"/>
           <a href="javascript:" class="weui-icon-clear" @click="clear" v-show="currentValue"></a>
         </div>
-        <label :for="`search_input_${uuid}`" class="weui-search-bar__label" v-show="!isFocus && !value">
+        <label :for="`search_input_${uuid}`" class="weui-search-bar__label" v-show="!isFocus && !value" v-if="label">
           <i class="weui-icon-search"></i>
           <span>Search</span>
         </label>
       </form>
-      <a href="javascript:" class="weui-search-bar__cancel-btn" @click="cancel">cancel</a>
+      <a href="javascript:" class="weui-search-bar__cancel-btn" @click="cancel" v-if="label">cancel</a>
+      <a href="javascript:" class="weui-search-bar__cancel-btn" @click="submit" v-else>Search</a>
     </div>
     <div class="weui-cells m-search_show" v-show="isFixed">
       <slot></slot>
@@ -63,7 +64,8 @@ export default {
       type: String,
       default: 'fixed'
     },
-    autoScrollToTop: Boolean
+    autoScrollToTop: Boolean,
+    label: Boolean
   },
   created () {
     if (this.value) {
@@ -115,6 +117,9 @@ export default {
     },
     onBlur () {
       this.isFocus = false
+    },
+    submit (item) {
+      this.$emit('on-result-click', item)
     }
   },
   data () {

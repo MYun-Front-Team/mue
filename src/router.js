@@ -77,6 +77,15 @@ const routers = [
             resolve(require('./demo/MTabBar.vue'))
           })
         }
+      },
+      {
+        path: 'MSearch',
+        name: 'MSearch',
+        component (resolve) {
+          require.ensure(['./demo/MSearch.vue'], () => {
+            resolve(require('./demo/MSearch.vue'))
+          })
+        }
       }
     ]
   }

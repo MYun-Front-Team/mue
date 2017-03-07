@@ -1,24 +1,21 @@
 <template>
   <div>
-    <img src="../assets/demo/filter_bg.jpg" style="width: 100%">
-    <search @result-click="resultClick" @on-change="getResult" :results="results" v-model="value" position="absolute" auto-scroll-to-top top="46px"></search>
-    <br>
-    <group>
-      <cell title="static position demo" is-link link="/component/search-static"></cell>
-    </group>
+    <img src="../assets/demo.png" style="width: 100%">
+    <search @result-click="resultClick" label @on-change="getResult" :results="results" v-model="value" position="absolute" auto-scroll-to-top top="0"></search>
+    <divider>固定位置搜索</divider>
+    <search @result-click="resultClick" label @on-change="getResult" :results="results1" v-model="value1" :autoFixed=false position="fixed" auto-scroll-to-top ></search>
+    <divider>不同搜索样式</divider>
+    <search @result-click="resultClick"  @on-change="getResult" :results="results2" v-model="value2" :autoFixed=false position="fixed" ></search>
   </div>
 </template>
-
 <script>
+  import Divider from '../components/divider/index.vue'
   import Search from '../components/search/index.vue'
-  import Group from '../components/group/index.vue'
-  import Cell from '../components/cell/index.vue'
 
   export default {
     components: {
       Search,
-      Group,
-      Cell
+      Divider
     },
     methods: {
       resultClick (item) {
@@ -31,7 +28,11 @@
     data () {
       return {
         results: [],
-        value: 'test'
+        value: 'test',
+        results1: [],
+        results2: [],
+        value1: '',
+        value2: ''
       }
     }
   }

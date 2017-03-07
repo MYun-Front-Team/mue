@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!--demo meun-->
+    <!--demo menu-->
     <router-link to="/Mbutton">Mbutton</router-link>
     <router-link to="/MFlexBox">MFlexBox</router-link>
     <router-link to="/MHeader">MHeader</router-link>
@@ -12,8 +12,7 @@
 </template>
 
 <style>
-  #app{ padding: .24rem;}
-  .router-view a{ float: left; width: 25%; padding-bottom: .24rem;}
+  #app>.router-view> a{ float: left; width: 25%; padding-bottom: .24rem;}
 </style>
 
 <script>
