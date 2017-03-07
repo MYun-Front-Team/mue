@@ -8,6 +8,7 @@
     <router-link to="/MStep">MStep</router-link>
     <router-link to="/MTabBar">MTabBar</router-link>
     <router-link to="/MSearch">MSearch</router-link>
+    <router-link to="/MTab">MTab</router-link>
   </div>
 </template>
 
