@@ -12,6 +12,9 @@
     <router-link to="/MCellBox">MCellBox</router-link>
     <router-link to="/MCell">MCell</router-link>
     <router-link to="/MDateTime">MDateTime</router-link>
+    <router-link to="/MButtonTab">MButtonTab</router-link>
+    <router-link to="/MPanel">MPanel</router-link>
+    <router-link to="/MPicker">MPicker</router-link>
   </div>
 </template>
 

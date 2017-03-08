@@ -122,6 +122,33 @@ const routers = [
             resolve(require('./demo/MDateTime.vue'))
           })
         }
+      },
+      {
+        path: 'MButtonTab',
+        name: 'MButtonTab',
+        component (resolve) {
+          require.ensure(['./demo/MButtonTab.vue'], () => {
+            resolve(require('./demo/MButtonTab.vue'))
+          })
+        }
+      },
+      {
+        path: 'MPanel',
+        name: 'MPanel',
+        component (resolve) {
+          require.ensure(['./demo/MPanel.vue'], () => {
+            resolve(require('./demo/MPanel.vue'))
+          })
+        }
+      },
+      {
+        path: 'MPicker',
+        name: 'MPicker',
+        component (resolve) {
+          require.ensure(['./demo/MPicker.vue'], () => {
+            resolve(require('./demo/MPicker.vue'))
+          })
+        }
       }
     ]
   }

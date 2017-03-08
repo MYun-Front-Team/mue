@@ -10,7 +10,8 @@
 
 <script>
 import Scroller from './scroller'
-import { Flexbox, FlexboxItem } from '../flexbox'
+import Flexbox from '../flexbox/flexbox.vue'
+import FlexboxItem from '../flexbox/flexbox-item.vue'
 import Manager from './chain'
 
 export default {
