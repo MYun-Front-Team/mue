@@ -113,6 +113,15 @@ const routers = [
             resolve(require('./demo/MCell.vue'))
           })
         }
+      },
+      {
+        path: 'MDateTime',
+        name: 'MDateTime',
+        component (resolve) {
+          require.ensure(['./demo/MDateTime.vue'], () => {
+            resolve(require('./demo/MDateTime.vue'))
+          })
+        }
       }
     ]
   }

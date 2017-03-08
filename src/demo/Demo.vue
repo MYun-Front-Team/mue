@@ -11,6 +11,7 @@
     <router-link to="/MTab">MTab</router-link>
     <router-link to="/MCellBox">MCellBox</router-link>
     <router-link to="/MCell">MCell</router-link>
+    <router-link to="/MDateTime">MDateTime</router-link>
   </div>
 </template>
 
