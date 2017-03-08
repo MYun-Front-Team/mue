@@ -9,6 +9,8 @@
     <router-link to="/MTabBar">MTabBar</router-link>
     <router-link to="/MSearch">MSearch</router-link>
     <router-link to="/MTab">MTab</router-link>
+    <router-link to="/MCellBox">MCellBox</router-link>
+    <router-link to="/MCell">MCell</router-link>
   </div>
 </template>
 

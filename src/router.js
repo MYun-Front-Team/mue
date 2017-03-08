@@ -95,6 +95,24 @@ const routers = [
             resolve(require('./demo/MTab.vue'))
           })
         }
+      },
+      {
+        path: 'MCellBox',
+        name: 'MCellBox',
+        component (resolve) {
+          require.ensure(['./demo/MCellBox.vue'], () => {
+            resolve(require('./demo/MCellBox.vue'))
+          })
+        }
+      },
+      {
+        path: 'MCell',
+        name: 'MCell',
+        component (resolve) {
+          require.ensure(['./demo/MCell.vue'], () => {
+            resolve(require('./demo/MCell.vue'))
+          })
+        }
       }
     ]
   }

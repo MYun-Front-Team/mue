@@ -28,6 +28,6 @@ export default {
 @import '../../styles/blank.less';
 
 .m-no-group-title {
-  margin-top:15px;
+  margin-top:.26rem;
 }
 </style>

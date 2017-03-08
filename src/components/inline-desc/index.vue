@@ -4,7 +4,7 @@
 
 <style>
 .m-label-desc {
-  font-size:14px;
-  color:#666;
+  font-size:.22rem;
+  color:#999;
 }
 </style>
