@@ -142,11 +142,11 @@ const routers = [
         }
       },
       {
-        path: 'MPicker',
-        name: 'MPicker',
+        path: 'MPopUpPicker',
+        name: 'MPopUpPicker',
         component (resolve) {
-          require.ensure(['./demo/MPicker.vue'], () => {
-            resolve(require('./demo/MPicker.vue'))
+          require.ensure(['./demo/MPopUpPicker.vue'], () => {
+            resolve(require('./demo/MPopUpPicker.vue'))
           })
         }
       }

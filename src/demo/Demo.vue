@@ -14,7 +14,7 @@
     <router-link to="/MDateTime">MDateTime</router-link>
     <router-link to="/MButtonTab">MButtonTab</router-link>
     <router-link to="/MPanel">MPanel</router-link>
-    <router-link to="/MPicker">MPicker</router-link>
+    <router-link to="/MPopUpPicker">MPicker</router-link>
   </div>
 </template>
 
