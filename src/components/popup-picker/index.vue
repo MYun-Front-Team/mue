@@ -1,14 +1,14 @@
 <template>
-  <div class="vux-cell-box">
-    <div class="weui-cell vux-tap-active weui-cell_access" @click="onClick" v-show="showCell">
+  <div class="m-cell-box">
+    <div class="weui-cell m-tap-active weui-cell_access" @click="onClick" v-show="showCell">
       <div class="weui-cell__hd">
         <label class="weui-label" :style="{display: 'block', width: $parent.labelWidth || $parent.$parent.labelWidth, textAlign: $parent.labelAlign || $parent.$parent.labelAlign, marginRight: $parent.labelMarginRight || $parent.$parent.labelMarginRight}" v-if="title" v-html="title"></label>
         <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
       </div>
-      <div class="vux-cell-primary vux-popup-picker-select-box">
-        <div class="vux-popup-picker-select" :style="{textAlign: valueTextAlign}">
-          <span class="vux-popup-picker-value" v-if="!showName && value.length">{{value | array2string}}</span>
-          <span class="vux-popup-picker-value" v-if="showName && value.length">{{value | value2name(data)}}</span>
+      <div class="m-cell-primary m-popup-picker-select-box">
+        <div class="m-popup-picker-select" :style="{textAlign: valueTextAlign}">
+          <span class="m-popup-picker-value" v-if="!showName && value.length">{{value | array2string}}</span>
+          <span class="m-popup-picker-value" v-if="showName && value.length">{{value | value2name(data)}}</span>
           <span v-if="!value.length && placeholder" v-html="placeholder"></span>
         </div>
       </div>
@@ -16,12 +16,12 @@
       </div>
     </div>
 
-    <popup v-model="showValue" class="vux-popup-picker" :id="'vux-popup-picker-'+uuid" @on-hide="onPopupHide" @on-show="$emit('on-show')">
-      <div class="vux-popup-picker-container">
-        <div class="vux-popup-picker-header">
+    <popup v-model="showValue" class="m-popup-picker" :id="'m-popup-picker-'+uuid" @on-hide="onPopupHide" @on-show="$emit('on-show')">
+      <div class="m-popup-picker-container">
+        <div class="m-popup-picker-header">
           <flexbox>
-            <flexbox-item class="vux-popup-picker-header-menu" @click.native="onHide(false)">{{cancelText}}</flexbox-item>
-            <flexbox-item class="vux-popup-picker-header-menu vux-popup-picker-header-menu-right" @click.native="onHide(true)">{{confirmText}}</flexbox-item>
+            <flexbox-item class="m-popup-picker-header-menu" @click.native="onHide(false)">{{cancelText}}</flexbox-item>
+            <flexbox-item class="m-popup-picker-header-menu m-popup-picker-header-menu-right" @click.native="onHide(true)">{{confirmText}}</flexbox-item>
           </flexbox>
         </div>
         <picker
@@ -30,7 +30,7 @@
         @on-change="onPickerChange"
         :columns="columns"
         :fixed-columns="fixedColumns"
-        :container="'#vux-popup-picker-'+uuid"></picker>
+        :container="'#m-popup-picker-'+uuid"></picker>
       </div>
     </popup>
 
@@ -189,10 +189,10 @@ export default {
 <style lang="less">
 @import '../../styles/variable.less';
 
-.vux-cell-box {
+.m-cell-box {
   position: relative;
 }
-.vux-cell-box:before {
+.m-cell-box:before {
   content: " ";
   position: absolute;
   left: 0;
@@ -205,30 +205,30 @@ export default {
   transform: scaleY(0.5);
   left: 15px;
 }
-.vux-popup-picker-header {
+.m-popup-picker-header {
   height: 44px;
   color: @popup-picker-header-text-color;
 }
-.vux-popup-picker-value {
+.m-popup-picker-value {
   /* display: inline-block; */
 }
-.vux-popup-picker-header-menu {
+.m-popup-picker-header-menu {
   text-align: left;
   padding-left: 15px;
   line-height: 44px;
 }
-.vux-popup-picker-header-menu-right {
+.m-popup-picker-header-menu-right {
   text-align: right;
   padding-right: 15px;
 }
-.vux-popup-picker-select {
+.m-popup-picker-select {
   width: 100%;
   position: relative;
 }
-.vux-popup-picker-select span {
+.m-popup-picker-select span {
   padding-right: 15px;
 }
-.vux-popup-picker-select-box.weui-cell__bd:after {
+.m-popup-picker-select-box.weui-cell__bd:after {
   content: " ";
   display: inline-block;
   transform: rotate(45deg);

@@ -1,5 +1,5 @@
 // not a good way but works well
-window.__$vuxPopups = window.__$vuxPopups || {}
+window.__$mPopups = window.__$mPopups || {}
 const popupDialog = function (option) {
   this.uuid = Math.random().toString(36).substring(3, 8)
   this.params = {}
@@ -14,9 +14,9 @@ const popupDialog = function (option) {
       onClose: option.onClose || function () {}
     }
   }
-  if (!!document.querySelectorAll('.vux-popup-mask').length <= 0) {
+  if (!!document.querySelectorAll('.m-popup-mask').length <= 0) {
     this.divMask = document.createElement('a')
-    this.divMask.className = 'vux-popup-mask'
+    this.divMask.className = 'm-popup-mask'
     this.divMask.dataset.uuid = '' // 用于多个popup共享一个mask
     this.divMask.href = 'javascript:void(0)'
     document.body.appendChild(this.divMask)
@@ -28,15 +28,15 @@ const popupDialog = function (option) {
     div = option.container
   }
 
-  div.className = 'vux-popup-dialog vux-popup-dialog-' + this.uuid
+  div.className = 'm-popup-dialog m-popup-dialog-' + this.uuid
 
   this.div = div
 
   if (!option.container) {
     document.body.appendChild(div)
   }
-  this.container = document.querySelector('.vux-popup-dialog-' + this.uuid)
-  this.mask = document.querySelector('.vux-popup-mask')
+  this.container = document.querySelector('.m-popup-dialog-' + this.uuid)
+  this.mask = document.querySelector('.m-popup-mask')
   this.mask.dataset.uuid += `,${this.uuid}`
   this._bindEvents()
   option = null
@@ -54,31 +54,31 @@ popupDialog.prototype._bindEvents = function () {
 }
 
 popupDialog.prototype.show = function () {
-  this.mask.classList.add('vux-popup-show')
-  this.container.classList.add('vux-popup-show')
-  if (this.container.classList.contains('vux-popup')) {
-    this.container.classList.remove('vux-popup')
-    this.container.classList.add('vux-popup-dialog')
-    this.container.classList.add('vux-popup-dialog' + this.uuid)
+  this.mask.classList.add('m-popup-show')
+  this.container.classList.add('m-popup-show')
+  if (this.container.classList.contains('m-popup')) {
+    this.container.classList.remove('m-popup')
+    this.container.classList.add('m-popup-dialog')
+    this.container.classList.add('m-popup-dialog' + this.uuid)
   }
   this.params.onOpen && this.params.onOpen(this)
   this.isShow = true
-  window.__$vuxPopups[this.uuid] = 1
+  window.__$mPopups[this.uuid] = 1
 }
 
 popupDialog.prototype.hide = function (shouldCallback = true) {
-  this.container.classList.remove('vux-popup-show')
-  if (!document.querySelector('.vux-popup-dialog.vux-popup-show')) {
-    this.mask.classList.remove('vux-popup-show')
+  this.container.classList.remove('m-popup-show')
+  if (!document.querySelector('.m-popup-dialog.m-popup-show')) {
+    this.mask.classList.remove('m-popup-show')
   }
-  if (this.container.classList.contains('vux-popup')) {
-    this.container.classList.remove('vux-popup')
-    this.container.classList.add('vux-popup-dialog')
-    this.container.classList.add('vux-popup-dialog' + this.uuid)
+  if (this.container.classList.contains('m-popup')) {
+    this.container.classList.remove('m-popup')
+    this.container.classList.add('m-popup-dialog')
+    this.container.classList.add('m-popup-dialog' + this.uuid)
   }
   shouldCallback === false && this.params.onClose && this.params.hideOnBlur && this.params.onClose(this)
   this.isShow = false
-  delete window.__$vuxPopups[this.uuid]
+  delete window.__$mPopups[this.uuid]
 }
 
 popupDialog.prototype.html = function (html) {
@@ -93,7 +93,7 @@ popupDialog.prototype.destroy = function () {
   } else {
     this.hide()
   }
-  delete window.__$vuxPopups[this.uuid]
+  delete window.__$mPopups[this.uuid]
 }
 
 export default popupDialog

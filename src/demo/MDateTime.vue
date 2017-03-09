@@ -65,7 +65,7 @@
     },
     data () {
       return {
-        value1: '2000-11-12',
+        value1: '2000-01-01',
         value2: '',
         value3: '',
         value4: '',

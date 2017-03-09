@@ -199,7 +199,7 @@ export default {
 .scroller-component {
   display: block;
   position: relative;
-  height: 3rem;
+  height: 2.6rem;
   overflow: hidden;
   width: 100%;
 }
@@ -224,7 +224,7 @@ export default {
     linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.6)),
     linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.6));
   background-position: top, bottom;
-  background-size: 100% 1.24rem;
+  background-size: 100% 1.04rem;
   background-repeat: no-repeat;
 }
 
@@ -241,7 +241,7 @@ export default {
   height: .52rem;
   position: absolute;
   left: 0;
-  top: 1.24rem;
+  top: 1.04rem;
   z-index: 3;
   background-image:
     linear-gradient(to bottom, #d0d0d0, #d0d0d0, transparent, transparent),
