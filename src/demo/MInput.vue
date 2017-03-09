@@ -36,7 +36,7 @@
     </group>
 
     <group title="html title">
-      <m-input title='`<span style="">hello</span>`' placeholder="I'm placeholder"></m-input>
+      <m-input :title='`<span>hello</span>`' placeholder="I'm placeholder"></m-input>
     </group>
     <br>
     <m-button @click.native="style = 'color:red;'">set red</m-button>

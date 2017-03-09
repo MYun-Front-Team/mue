@@ -7,8 +7,9 @@
       </div>
       <div class="m-cell-primary m-popup-picker-select-box">
         <div class="m-popup-picker-select" :style="{textAlign: valueTextAlign}">
-          <span class="m-popup-picker-value" v-if="!showName && value.length">{{value | array2string}}</span>
-          <span class="m-popup-picker-value" v-if="showName && value.length">{{value | value2name(data)}}</span>
+          <span class="m-popup-picker-value" v-if="!displayFormat && !showName && value.length">{{value | array2string}}</span>
+          <span class="m-popup-picker-value" v-if="!displayFormat && showName && value.length">{{value | value2name(data)}}</span>
+          <span class="m-popup-picker-value" v-if="displayFormat && value.length">{{ displayFormat(value) }}</span>
           <span v-if="!value.length && placeholder" v-html="placeholder"></span>
         </div>
       </div>
@@ -107,7 +108,8 @@ export default {
       type: Boolean,
       default: true
     },
-    show: Boolean
+    show: Boolean,
+    displayFormat: Function
   },
   methods: {
     getNameValues () {

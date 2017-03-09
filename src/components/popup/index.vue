@@ -43,12 +43,12 @@ export default {
   },
   methods: {
     /**
-    * https://github.com/airyland/m/issues/311
-    * https://benfrain.com/z-index-stacking-contexts-experimental-css-and-ios-safari/
-    */
+     * https://github.com/airyland/m/issues/311
+     * https://benfrain.com/z-index-stacking-contexts-experimental-css-and-ios-safari/
+     */
     fixSafariOverflowScrolling (type) {
       if (!this.$overflowScrollingList.length) return
-      if (!/iphone/i.test(navigator.userAgent)) return
+      // if (!/iphone/i.test(navigator.userAgent)) return
       for (let i = 0; i < this.$overflowScrollingList.length; i++) {
         this.$overflowScrollingList[i].style.webkitOverflowScrolling = type
       }
