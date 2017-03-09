@@ -1,7 +1,7 @@
 <template>
   <div>
     <group title="single column">
-      <popup-picker :title="title1" :data="list1" v-model="value1" @on-show="onShow" @on-hide="onHide" @on-change="onChange"></popup-picker>
+      <popup-picker :title="title1" confirmText="确定" cancelText="取消" :data="list1" v-model="value1" @on-show="onShow" @on-hide="onHide" @on-change="onChange"></popup-picker>
     </group>
     <br>
     <div class="picker-buttons">
@@ -34,7 +34,6 @@
     </group>
 
     <br>
-
 
     <br>
     <br>

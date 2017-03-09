@@ -1,8 +1,8 @@
 <template>
-  <div class="vux-picker">
+  <div class="m-picker">
     <flexbox :gutter="0">
       <flexbox-item v-for="(one, index) in currentData" :key="index" style="margin-left:0;">
-        <div class="vux-picker-item" :id="'vux-picker-' + uuid + '-' + index"></div>
+        <div class="m-picker-item" :id="'m-picker-' + uuid + '-' + index"></div>
       </flexbox-item>
     </flexbox>
   </div>
@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     getId (i) {
-      return `#vux-picker-${this.uuid}-${i}`
+      return `#m-picker-${this.uuid}-${i}`
     },
     render (data, value) {
       this.count = this.currentData.length

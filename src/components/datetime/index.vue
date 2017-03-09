@@ -199,7 +199,6 @@ export default {
 .scroller-component {
   display: block;
   position: relative;
-  height: 2.6rem;
   overflow: hidden;
   width: 100%;
 }
@@ -224,24 +223,19 @@ export default {
     linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.6)),
     linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.6));
   background-position: top, bottom;
-  background-size: 100% 1.04rem;
   background-repeat: no-repeat;
 }
 
 .scroller-item {
   text-align: center;
   font-size: .24rem;
-  height: .52rem;
-  line-height: .52rem;
-  color: #000;
+  color: #333;
 }
 
 .scroller-indicator {
   width: 100%;
-  height: .52rem;
   position: absolute;
   left: 0;
-  top: 1.04rem;
   z-index: 3;
   background-image:
     linear-gradient(to bottom, #d0d0d0, #d0d0d0, transparent, transparent),
@@ -257,7 +251,7 @@ export default {
   left: 0;
   bottom: 0;
   z-index: 10000;
-  background-color: #fff;
+  background-color: #eee;
   display: none;
   transition: transform 0.3s ease;
   transform: translateY(100%);
@@ -308,7 +302,6 @@ export default {
   width: 100%;
   box-align: center;
   align-items: center;
-  padding: .2rem 0;
 }
 
 .dp-header .dp-item,
@@ -323,5 +316,55 @@ export default {
 }
 .m-cell-primary {
   flex: 1;
+}
+
+@media screen and (min-width:320px) {
+  .scroller-component{ height: 175px;}
+  .scroller-item {
+    height: 25px;
+    line-height: 25px;
+  }
+  .scroller-mask{ background-size: 100% 75px;}
+  .scroller-indicator{ height: 25px; top: 75px;}
+}
+
+@media screen and (min-width:360px) {
+  .scroller-component{ height: 182px;}
+  .scroller-item {
+    height: 26px;
+    line-height: 26px;
+  }
+  .scroller-mask{ background-size: 100% 78px;}
+  .scroller-indicator{ height: 26px; top: 78px;}
+}
+
+@media screen and (min-width:375px) {
+  .scroller-component{ height: 203px;}
+  .scroller-item {
+    height: 29px;
+    line-height: 29px;
+  }
+  .scroller-mask{ background-size: 100% 87px;}
+  .scroller-indicator{ height: 29px; top: 87px;}
+}
+
+@media screen and (min-width:414px) {
+  .scroller-component{ height: 238px;}
+  .scroller-item {
+    height: 34px;
+    line-height: 34px;
+  }
+  .scroller-mask{ background-size: 100% 102px;}
+  .scroller-indicator{ height: 34px; top: 102px;}
+}
+
+@media screen and (min-width:480px) {
+  .scroller-component{ height: 273px;}
+  .scroller-item {
+    height: 39px;
+    line-height: 39px;
+  }
+  .scroller-mask{ background-size: 100% 117px;}
+  .scroller-indicator{ height: 39px; top: 117px;}
 }
 </style>

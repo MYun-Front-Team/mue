@@ -1,7 +1,7 @@
 <template>
   <div>
     <group title="default format: YYYY-MM-DD">
-      <datetime v-model="value1" @on-change="change" title="Birthday"></datetime>
+      <datetime v-model="value1" @on-change="change" confirmText="确定" title="Birthday"></datetime>
     </group>
 
     <p class="center" @click="value1 = '2017-11-11'"> click to change value to: 2017-11-11</p>

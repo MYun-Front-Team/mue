@@ -57,12 +57,9 @@ var Scroller = function (container, options) {
   content.innerHTML = html
 
   self.__container.appendChild(component)
-
-  self.__itemHeight = Math.round(parseFloat(getComputedStyle(indicator, 'height'), 10))
+  self.__itemHeight = parseInt(getComputedStyle(indicator, 'height'), 10)
   self.__callback = options.callback || function (top) {
     content.style.webkitTransform = 'translate3d(0, ' + (-top) + 'px, 0)'
-    // console.log(getComputedStyle(indicator, 'top'))
-    // console.log(-top)
   }
 
   var rect = component.getBoundingClientRect()
@@ -137,9 +134,6 @@ var members = {
     var clientItemCount = Math.round(self.__clientHeight / self.__itemHeight)
 
     self.__minScrollTop = -self.__itemHeight * (clientItemCount / 2)
-
-    console.log(self.__clientHeight + ' : ' + self.__itemHeight + ' : ' + clientItemCount + ' : ' + self.__minScrollTop)
-
     self.__maxScrollTop = self.__minScrollTop + totalItemCount * self.__itemHeight - 0.1
   },
 
@@ -149,7 +143,6 @@ var members = {
       return
     }
     self.__scrollTop = self.__minScrollTop + index * self.__itemHeight
-    console.log('self.__scrollTop:' + self.__scrollTop)
     self.scrollTo(self.__scrollTop, animate)
 
     self.__selectItem(self.__content.children[index])
@@ -182,7 +175,6 @@ var members = {
       Animate.stop(self.__isDecelerating)
       self.__isDecelerating = false
     }
-
     top = Math.round(top / self.__itemHeight) * self.__itemHeight
     top = Math.max(Math.min(self.__maxScrollTop, top), self.__minScrollTop)
 

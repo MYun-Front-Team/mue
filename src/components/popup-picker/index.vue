@@ -37,14 +37,6 @@
   </div>
 </template>
 
-<i18n>
-cancel_text:
-  en: cancel
-  zh-CN: 取消
-confirm_text:
-  en: ok
-  zh-CN: 完成
-</i18n>
 
 <script>
 import Picker from '../picker'
@@ -203,10 +195,12 @@ export default {
   color: #D9D9D9;
   transform-origin: 0 0;
   transform: scaleY(0.5);
-  left: 15px;
+  left: .24rem;
 }
 .m-popup-picker-header {
-  height: 44px;
+  height: .68rem;
+  line-height: .68rem;
+  font-size: .26rem;
   color: @popup-picker-header-text-color;
 }
 .m-popup-picker-value {
@@ -214,19 +208,18 @@ export default {
 }
 .m-popup-picker-header-menu {
   text-align: left;
-  padding-left: 15px;
-  line-height: 44px;
+  padding-left: .24rem;
 }
 .m-popup-picker-header-menu-right {
   text-align: right;
-  padding-right: 15px;
+  padding-right: .24rem;
 }
 .m-popup-picker-select {
   width: 100%;
   position: relative;
 }
 .m-popup-picker-select span {
-  padding-right: 15px;
+  padding-right: .24rem;
 }
 .m-popup-picker-select-box.weui-cell__bd:after {
   content: " ";
@@ -241,7 +234,7 @@ export default {
   top: -2px;
   position: absolute;
   top: 50%;
-  right: 15px;
+  right: .24rem;
   margin-top: -3px;
 }
 </style>
