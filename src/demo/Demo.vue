@@ -15,6 +15,8 @@
     <router-link to="/MButtonTab">MButtonTab</router-link>
     <router-link to="/MPanel">MPanel</router-link>
     <router-link to="/MPopUpPicker">MPicker</router-link>
+    <router-link to="/MPopUp">MPopUp</router-link>
+    <router-link to="/MInput">MInput</router-link>
   </div>
 </template>
 

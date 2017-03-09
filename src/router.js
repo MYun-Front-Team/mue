@@ -149,6 +149,24 @@ const routers = [
             resolve(require('./demo/MPopUpPicker.vue'))
           })
         }
+      },
+      {
+        path: 'MPopUp',
+        name: 'MPopUp',
+        component (resolve) {
+          require.ensure(['./demo/MPopUp.vue'], () => {
+            resolve(require('./demo/MPopUp.vue'))
+          })
+        }
+      },
+      {
+        path: 'MInput',
+        name: 'MInput',
+        component (resolve) {
+          require.ensure(['./demo/MInput.vue'], () => {
+            resolve(require('./demo/MInput.vue'))
+          })
+        }
       }
     ]
   }
