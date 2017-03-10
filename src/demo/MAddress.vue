@@ -35,6 +35,9 @@
   import MAddress from '../components/m-address/index.vue'
   import MButton from '../components/m-button/index.vue'
   import Cell from '../components/cell/index.vue'
+  import ChinaAddressData from '../datas/china_address.json'
+  import value2name from '../filters/value2name'
+
   export default {
     components: {
       Group,
