@@ -1,11 +1,11 @@
 <template>
   <div style="padding: .24rem;">
-    <m-button type="primary"  action-type="button"  @click.native="Show" >弹出PopUp</m-button>
+    <m-button type="primary"  action-type="button"  @click.native="show=true" >弹出PopUp</m-button>
 
     <popup v-model="show" height="10rem">
       <div class="popup0">
         <panel header="图文组合列表"  :list="list" :type="type"></panel>
-        <div style="text-align: center; padding: .24rem"><a href="javascript:;" @click="Close"><icon type="cancel" ></icon> 关闭</a> </div>
+        <div style="text-align: center; padding: .24rem"><a href="javascript:;" @click="show=false"><icon type="cancel" ></icon> 关闭</a> </div>
       </div>
     </popup>
 
@@ -46,12 +46,6 @@
       }
     },
     methods: {
-      Show () {
-        this.show = true
-      },
-      Close () {
-        this.show = false
-      }
     }
   }
 </script>
