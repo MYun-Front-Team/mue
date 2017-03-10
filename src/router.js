@@ -203,6 +203,42 @@ const routers = [
             resolve(require('./demo/MNumber.vue'))
           })
         }
+      },
+      {
+        path: 'MRater',
+        name: 'MRater',
+        component (resolve) {
+          require.ensure(['./demo/MRater.vue'], () => {
+            resolve(require('./demo/MRater.vue'))
+          })
+        }
+      },
+      {
+        path: 'MMsg',
+        name: 'MMsg',
+        component (resolve) {
+          require.ensure(['./demo/MMsg.vue'], () => {
+            resolve(require('./demo/MMsg.vue'))
+          })
+        }
+      },
+      {
+        path: 'MTextarea',
+        name: 'MTextarea',
+        component (resolve) {
+          require.ensure(['./demo/MTextarea.vue'], () => {
+            resolve(require('./demo/MTextarea.vue'))
+          })
+        }
+      },
+      {
+        path: 'MAddress',
+        name: 'MAddress',
+        component (resolve) {
+          require.ensure(['./demo/MAddress.vue'], () => {
+            resolve(require('./demo/MAddress.vue'))
+          })
+        }
       }
     ]
   }

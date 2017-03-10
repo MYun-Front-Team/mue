@@ -21,6 +21,10 @@
     <router-link to="/MChecklist">MChecklist</router-link>
     <router-link to="/MChecker">MChecker</router-link>
     <router-link to="/MNumber">MNumber</router-link>
+    <router-link to="/MRater">MRater</router-link>
+    <router-link to="/MMsg">MMsg</router-link>
+    <router-link to="/MTextarea">MTextarea</router-link>
+    <router-link to="/MAddress">MAddress</router-link>
   </div>
 </template>
 
