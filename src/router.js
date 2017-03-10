@@ -167,6 +167,42 @@ const routers = [
             resolve(require('./demo/MInput.vue'))
           })
         }
+      },
+      {
+        path: 'MRadio',
+        name: 'MRadio',
+        component (resolve) {
+          require.ensure(['./demo/MRadio.vue'], () => {
+            resolve(require('./demo/MRadio.vue'))
+          })
+        }
+      },
+      {
+        path: 'MChecklist',
+        name: 'MChecklist',
+        component (resolve) {
+          require.ensure(['./demo/MChecklist.vue'], () => {
+            resolve(require('./demo/MChecklist.vue'))
+          })
+        }
+      },
+      {
+        path: 'MChecker',
+        name: 'MChecker',
+        component (resolve) {
+          require.ensure(['./demo/MChecker.vue'], () => {
+            resolve(require('./demo/MChecker.vue'))
+          })
+        }
+      },
+      {
+        path: 'MNumber',
+        name: 'MNumber',
+        component (resolve) {
+          require.ensure(['./demo/MNumber.vue'], () => {
+            resolve(require('./demo/MNumber.vue'))
+          })
+        }
       }
     ]
   }

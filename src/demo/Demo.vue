@@ -17,6 +17,10 @@
     <router-link to="/MPopUpPicker">MPicker</router-link>
     <router-link to="/MPopUp">MPopUp</router-link>
     <router-link to="/MInput">MInput</router-link>
+    <router-link to="/MRadio">MRadio</router-link>
+    <router-link to="/MChecklist">MChecklist</router-link>
+    <router-link to="/MChecker">MChecker</router-link>
+    <router-link to="/MNumber">MNumber</router-link>
   </div>
 </template>
 
