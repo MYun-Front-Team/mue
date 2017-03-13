@@ -257,6 +257,15 @@ const routers = [
             resolve(require('./demo/MConfirm.vue'))
           })
         }
+      },
+      {
+        path: 'MToast',
+        name: 'MToast',
+        component (resolve) {
+          require.ensure(['./demo/MToast.vue'], () => {
+            resolve(require('./demo/MToast.vue'))
+          })
+        }
       }
     ]
   }

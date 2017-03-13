@@ -27,6 +27,7 @@
     <router-link to="/MAddress">MAddress</router-link>
     <router-link to="/MAlert">MAlert</router-link>
     <router-link to="/MConfirm">MConfirm</router-link>
+    <router-link to="/MToast">MToast</router-link>
   </div>
 </template>
 

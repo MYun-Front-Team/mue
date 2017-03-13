@@ -4,7 +4,7 @@
     <transition :name="currentTransition">
       <div class="weui-toast" :style="{width: width}" :class="toastClass" v-show="show">
         <i class="weui-icon-success-no-circle weui-icon_toast" v-show="type !== 'text'"></i>
-        <p class="weui-toast__content" v-if="text" :style="style" v-html="$t(text)"></p>
+        <p class="weui-toast__content" v-if="text" :style="style" v-html="text"></p>
         <p class="weui-toast__content" v-else><slot></slot></p>
       </div>
     </transition>
@@ -29,7 +29,7 @@ export default {
     transition: String,
     width: {
       type: String,
-      default: '7.6em'
+      default: '3rem'
     },
     isShowMask: {
       type: Boolean,
@@ -66,6 +66,7 @@ export default {
         'weui-toast_forbidden': this.type === 'warn',
         'weui-toast_cancel': this.type === 'cancel',
         'weui-toast_success': this.type === 'success',
+        'weui-toast_long': this.type === 'long',
         'weui-toast_text': this.type === 'text',
         'm-toast-top': this.position === 'top',
         'm-toast-bottom': this.position === 'bottom',
@@ -74,7 +75,7 @@ export default {
     },
     style () {
       if (this.type === 'text' && this.width === 'auto') {
-        return { padding: '10px' }
+        return { padding: '.08rem' }
       }
     }
   },
@@ -147,9 +148,6 @@ export default {
 }
 .weui-toast_text .weui-toast__content {
   margin: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 15px;
 }
 .weui-toast__content {
   font-size: @toast-content-font-size;

@@ -3,14 +3,15 @@
 .weui-toast {
     position: fixed;
     z-index: 5000;
-    width: 7.6em;
-    min-height: 7.6em;
+    width: 3rem;
+    min-height: .8rem;
+    line-height: .8rem;
     top: 180px;
     left: 50%;
-    margin-left: -3.8em;
+    margin-left: -1.5rem;
     background: rgba(17,17,17,0.7);
     text-align: center;
-    border-radius: 5px;
+    border-radius: .4rem;
     color: #FFFFFF;
 }
 .weui-icon_toast {
@@ -31,5 +32,21 @@
 }
 
 .weui-toast__content {
-    margin: 0 0 15px;
+
+}
+.weui-toast_forbidden,
+.weui-toast_cancel,
+.weui-toast_success{
+  border-radius: .1rem;
+  width: 2.2rem !important;
+}
+.weui-toast_long{
+  border-radius: .4rem;
+  & .weui-icon_toast{
+    display: none;
+  }
+  & .weui-toast__content{
+    line-height: 1.5;
+    padding: .3rem .6rem;
+  }
 }
