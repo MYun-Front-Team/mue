@@ -28,6 +28,8 @@
     <router-link to="/MAlert">MAlert</router-link>
     <router-link to="/MConfirm">MConfirm</router-link>
     <router-link to="/MToast">MToast</router-link>
+    <router-link to="/MActionsheet">MActionsheet</router-link>
+    <router-link to="/MLoad">MLoad</router-link>
   </div>
 </template>
 

@@ -9,22 +9,26 @@
     backface-visibility: hidden;
     z-index: 5000;
     width: 100%;
-    background-color: @weuiBgColorDefault;
     //slide up animation
     transition: transform .3s;
+    padding: .14rem;
+    box-sizing: border-box;
 }
 .weui-actionsheet__menu{
     background-color: #FFFFFF;
+    border-radius: 5px;
 }
 .weui-actionsheet__action {
-    margin-top: 6px;
+    margin-top:.12rem;
     background-color: #FFFFFF;
+    border-radius: 5px;
 }
 .weui-actionsheet__cell {
     position: relative;
-    padding: 10px 0;
+    padding: .18rem 0;
     text-align: center;
-    font-size: 18px;
+    font-size: .28rem;
+    line-height: 1.1;
     &:before {
         .setTopLine(@weuiCellBorderColor);
     }

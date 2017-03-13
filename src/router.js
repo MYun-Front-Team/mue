@@ -266,6 +266,24 @@ const routers = [
             resolve(require('./demo/MToast.vue'))
           })
         }
+      },
+      {
+        path: 'MActionsheet',
+        name: 'MActionsheet',
+        component (resolve) {
+          require.ensure(['./demo/MActionsheet.vue'], () => {
+            resolve(require('./demo/MActionsheet.vue'))
+          })
+        }
+      },
+      {
+        path: 'MLoad',
+        name: 'MLoad',
+        component (resolve) {
+          require.ensure(['./demo/MLoad.vue'], () => {
+            resolve(require('./demo/MLoad.vue'))
+          })
+        }
       }
     ]
   }

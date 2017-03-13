@@ -1,4 +1,4 @@
-import LoadingComponent from '../../components/loading'
+import LoadingComponent from '../../components/loading/index.vue'
 
 let $vm
 let watcher
@@ -38,18 +38,18 @@ const plugin = {
       }
     }
 
-    // all Vux's plugins are included in this.$vux
-    if (!vue.$vux) {
-      vue.$vux = {
+    // all m's plugins are included in this.$m
+    if (!vue.$m) {
+      vue.$m = {
         loading
       }
     } else {
-      vue.$vux.loading = loading
+      vue.$m.loading = loading
     }
 
     vue.mixin({
       created: function () {
-        this.$vux = vue.$vux
+        this.$m = vue.$m
       }
     })
   }
@@ -57,4 +57,3 @@ const plugin = {
 
 export default plugin
 export const install = plugin.install
-
