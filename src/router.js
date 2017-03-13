@@ -167,6 +167,123 @@ const routers = [
             resolve(require('./demo/MInput.vue'))
           })
         }
+      },
+      {
+        path: 'MRadio',
+        name: 'MRadio',
+        component (resolve) {
+          require.ensure(['./demo/MRadio.vue'], () => {
+            resolve(require('./demo/MRadio.vue'))
+          })
+        }
+      },
+      {
+        path: 'MChecklist',
+        name: 'MChecklist',
+        component (resolve) {
+          require.ensure(['./demo/MChecklist.vue'], () => {
+            resolve(require('./demo/MChecklist.vue'))
+          })
+        }
+      },
+      {
+        path: 'MChecker',
+        name: 'MChecker',
+        component (resolve) {
+          require.ensure(['./demo/MChecker.vue'], () => {
+            resolve(require('./demo/MChecker.vue'))
+          })
+        }
+      },
+      {
+        path: 'MNumber',
+        name: 'MNumber',
+        component (resolve) {
+          require.ensure(['./demo/MNumber.vue'], () => {
+            resolve(require('./demo/MNumber.vue'))
+          })
+        }
+      },
+      {
+        path: 'MRater',
+        name: 'MRater',
+        component (resolve) {
+          require.ensure(['./demo/MRater.vue'], () => {
+            resolve(require('./demo/MRater.vue'))
+          })
+        }
+      },
+      {
+        path: 'MMsg',
+        name: 'MMsg',
+        component (resolve) {
+          require.ensure(['./demo/MMsg.vue'], () => {
+            resolve(require('./demo/MMsg.vue'))
+          })
+        }
+      },
+      {
+        path: 'MTextarea',
+        name: 'MTextarea',
+        component (resolve) {
+          require.ensure(['./demo/MTextarea.vue'], () => {
+            resolve(require('./demo/MTextarea.vue'))
+          })
+        }
+      },
+      {
+        path: 'MAddress',
+        name: 'MAddress',
+        component (resolve) {
+          require.ensure(['./demo/MAddress.vue'], () => {
+            resolve(require('./demo/MAddress.vue'))
+          })
+        }
+      },
+      {
+        path: 'MAlert',
+        name: 'MAlert',
+        component (resolve) {
+          require.ensure(['./demo/MAlert.vue'], () => {
+            resolve(require('./demo/MAlert.vue'))
+          })
+        }
+      },
+      {
+        path: 'MConfirm',
+        name: 'MConfirm',
+        component (resolve) {
+          require.ensure(['./demo/MConfirm.vue'], () => {
+            resolve(require('./demo/MConfirm.vue'))
+          })
+        }
+      },
+      {
+        path: 'MToast',
+        name: 'MToast',
+        component (resolve) {
+          require.ensure(['./demo/MToast.vue'], () => {
+            resolve(require('./demo/MToast.vue'))
+          })
+        }
+      },
+      {
+        path: 'MActionsheet',
+        name: 'MActionsheet',
+        component (resolve) {
+          require.ensure(['./demo/MActionsheet.vue'], () => {
+            resolve(require('./demo/MActionsheet.vue'))
+          })
+        }
+      },
+      {
+        path: 'MLoad',
+        name: 'MLoad',
+        component (resolve) {
+          require.ensure(['./demo/MLoad.vue'], () => {
+            resolve(require('./demo/MLoad.vue'))
+          })
+        }
       }
     ]
   }

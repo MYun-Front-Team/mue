@@ -3,12 +3,12 @@ process.env.NODE_ENV = 'production'
 
 /**
  * --locale='zh-CN'
- * --namespace='vux'
+ * --namespace='m'
  * --components=Group,Cell
  */
 
 var argv = require('yargs').argv
-var namespace = argv.namespace || 'vux'
+var namespace = argv.namespace || 'm'
 
 const { build } = require('./umd-helper')
 
@@ -16,11 +16,11 @@ var isBuildAll = !argv.components
 var buildComponents = argv.components ? argv.components.split(',') : []
 
 let config = require('./webpack.prod.conf.js')
-const vuxConfig = require('./vux-config')
-vuxConfig.plugins.forEach(function (plugin) {
+const mConfig = require('./m-config')
+mConfig.plugins.forEach(function (plugin) {
   if (plugin.name === 'i18n') {
-    plugin.vuxStaticReplace = true
-    plugin.vuxLocale = argv['locale'] || 'zh-CN'
+    plugin.mStaticReplace = true
+    plugin.mLocale = argv['locale'] || 'zh-CN'
   }
 })
 
@@ -33,7 +33,7 @@ const path = require('path')
 mkdirp.sync(path.resolve(__dirname, '../dist/plugins'))
 mkdirp.sync(path.resolve(__dirname, '../dist/styles'))
 
-let list = require(path.resolve(__dirname, '../src/datas/vux_component_list.json'))
+let list = require(path.resolve(__dirname, '../src/datas/m_component_list.json'))
 const maps = require(path.resolve(__dirname, '../src/components/map.json'))
 
 // 查找在maps里但不在list里的组件
@@ -82,7 +82,7 @@ co(function* () {
 
   if (!buildComponents.length) {
     try {
-      yield build(buildMainConfig(), 'vux')
+      yield build(buildMainConfig(), 'm')
     } catch (e) {
       console.log(e)
     }
@@ -158,8 +158,8 @@ function buildMainConfig() {
 
   // list all components
   const list = require('../src/components/map.json')
-  let code = 'const _vux = {}\n'
-  code += `!!window && (window.vux = _vux)\n`
+  let code = 'const _m = {}\n'
+  code += `!!window && (window.m = _m)\n`
   code += `import Style from '../styles/index.vue'\n`
 
   delete list['NOTICE']
@@ -168,16 +168,16 @@ function buildMainConfig() {
   for (let i in list) {
     const name = `${namespace}${i}`
     code += `import ${name} from '${list[i]}'\n
-_vux['${name}'] = ${name}\n`
+_m['${name}'] = ${name}\n`
   }
 
   code += `
 if (!!window) {
-  for (let i in _vux) {
-    window[i] = _vux[i]
+  for (let i in _m) {
+    window[i] = _m[i]
   }
 }\n`
-  
+
   fs.writeFileSync(path.resolve(__dirname, '../src/components/index.js'), code)
 
   delete config.entry
@@ -189,14 +189,14 @@ if (!!window) {
   })
 
   config.plugins.push(new ExtractTextPlugin({
-    filename: `vux.min.css`
+    filename: `m.min.css`
   }))
 
   config.entry = config.entry || {}
-  config.entry['vux'] = 'src/components/index.js'
+  config.entry['m'] = 'src/components/index.js'
   config.output = {}
   config.output.libraryTarget = 'window'
-  config.output.filename = `vux.min.js`
+  config.output.filename = `m.min.js`
   config.output.path = path.resolve(__dirname, `../dist/`)
   delete config.__vueOptions__
   return config

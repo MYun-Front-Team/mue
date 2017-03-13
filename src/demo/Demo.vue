@@ -17,6 +17,19 @@
     <router-link to="/MPopUpPicker">MPicker</router-link>
     <router-link to="/MPopUp">MPopUp</router-link>
     <router-link to="/MInput">MInput</router-link>
+    <router-link to="/MRadio">MRadio</router-link>
+    <router-link to="/MChecklist">MChecklist</router-link>
+    <router-link to="/MChecker">MChecker</router-link>
+    <router-link to="/MNumber">MNumber</router-link>
+    <router-link to="/MRater">MRater</router-link>
+    <router-link to="/MMsg">MMsg</router-link>
+    <router-link to="/MTextarea">MTextarea</router-link>
+    <router-link to="/MAddress">MAddress</router-link>
+    <router-link to="/MAlert">MAlert</router-link>
+    <router-link to="/MConfirm">MConfirm</router-link>
+    <router-link to="/MToast">MToast</router-link>
+    <router-link to="/MActionsheet">MActionsheet</router-link>
+    <router-link to="/MLoad">MLoad</router-link>
   </div>
 </template>
 

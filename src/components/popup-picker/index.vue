@@ -79,8 +79,14 @@ export default {
       default: 'right'
     },
     title: String,
-    cancelText: String,
-    confirmText: String,
+    cancelText: {
+      type: String,
+      default: 'Cancel'
+    },
+    confirmText: {
+      type: String,
+      default: 'OK'
+    },
     data: {
       type: Array,
       default () {
