@@ -25,6 +25,8 @@
     <router-link to="/MMsg">MMsg</router-link>
     <router-link to="/MTextarea">MTextarea</router-link>
     <router-link to="/MAddress">MAddress</router-link>
+    <router-link to="/MAlert">MAlert</router-link>
+    <router-link to="/MConfirm">MConfirm</router-link>
   </div>
 </template>
 

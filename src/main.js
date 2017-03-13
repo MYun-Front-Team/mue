@@ -10,11 +10,15 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 // plugins
-// import { DevicePlugin, ToastPlugin, AlertPlugin, ConfirmPlugin } from 'vux'
-// Vue.use(DevicePlugin)
-// Vue.use(ToastPlugin)
-// Vue.use(AlertPlugin)
-// Vue.use(ConfirmPlugin)
+import DevicePlugin from './plugins/device'
+import ToastPlugin from './plugins/toast'
+import AlertPlugin from './plugins/alert'
+import ConfirmPlugin from './plugins/confirm'
+
+Vue.use(DevicePlugin)
+Vue.use(ToastPlugin)
+Vue.use(AlertPlugin)
+Vue.use(ConfirmPlugin)
 
 const FastClick = require('fastclick')
 FastClick.attach(document.body)

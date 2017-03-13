@@ -239,6 +239,24 @@ const routers = [
             resolve(require('./demo/MAddress.vue'))
           })
         }
+      },
+      {
+        path: 'MAlert',
+        name: 'MAlert',
+        component (resolve) {
+          require.ensure(['./demo/MAlert.vue'], () => {
+            resolve(require('./demo/MAlert.vue'))
+          })
+        }
+      },
+      {
+        path: 'MConfirm',
+        name: 'MConfirm',
+        component (resolve) {
+          require.ensure(['./demo/MConfirm.vue'], () => {
+            resolve(require('./demo/MConfirm.vue'))
+          })
+        }
       }
     ]
   }
