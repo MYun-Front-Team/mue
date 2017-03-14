@@ -7,7 +7,7 @@
       <div class="weui-actionsheet__menu">
         <div class="weui-actionsheet__cell m-actionsheet-menu-default" v-show="tip" v-html="tip">
         </div>
-        <div class="weui-actionsheet__cell" v-for="(menu, key) in menus" @click="onMenuClick(menu, key)" v-html="menu.label || menu" :class="`m-actionsheet-menu-${menu.type || 'default'}`">
+        <div class="weui-actionsheet__cell" v-for="(menu, key) in menus" @click="onMenuClick(menu, key)" v-html="menu.label || menu" :class="[menu.disable ? 'm-actionsheet-menu-disabled' : '', `m-actionsheet-menu-${menu.type || 'default'}`]">
         </div>
       </div>
       <div class="weui-actionsheet__action" @click="emitEvent('on-click-menu', 'cancel')" v-if="showCancel">
@@ -54,7 +54,7 @@ export default {
       if (typeof menu === 'string') {
         this.emitEvent('on-click-menu', key)
       } else {
-        if (menu.type !== 'disabled' && menu.type !== 'info') {
+        if (menu.type !== 'disabled') {
           if (menu.value) {
             this.emitEvent('on-click-menu', menu.value)
           } else {
