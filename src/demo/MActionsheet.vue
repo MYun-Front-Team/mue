@@ -15,7 +15,7 @@
     
     <actionsheet v-model="show1" :menus="menus1" @on-click-menu="click"></actionsheet>
     
-    <actionsheet v-model="show2" :menus="menus2" @on-click-menu="click" show-cancel></actionsheet>
+    <actionsheet v-model="show2" :menus="menus2" @on-click-menu="click" show-cancel @on-click-menu-cancel="onCancel"></actionsheet>
     
     <actionsheet v-model="show3" :menus="menus3" :tip="tip" @on-click-menu="click" @on-click-menu-delete="onDelete"
                  show-cancel></actionsheet>
@@ -60,23 +60,29 @@
         show3: false,
         show4: false,
         show5: false,
-        menus5: [
-          {
+        menus5: {
+          primary: {
             label: 'Primary',
-            type: 'primary',
-            value: 'primary'
-          }, {
+            type: 'primary'
+          },
+          warn: {
             label: 'Warn',
             type: 'warn'
-          }, {
+          },
+          disable: {
             label: 'Disabled',
             disable: true
-          }, {
+          },
+          default: {
             label: 'Default'
-          }],
+          }
+        },
         showSuccess: false,
         menus3: {
-          delete: '<span style="color:red">Delete</span>'
+          delete: {
+            label: '<span style="color:red">Delete</span>',
+            global: false
+          }
         }
       }
     },
@@ -86,6 +92,9 @@
       },
       onDelete () {
         this.showSuccess = true
+      },
+      onCancel () {
+        console.log('on cancel')
       }
     }
   }
