@@ -2,11 +2,11 @@
   <div class="mue-header">
     <div class="mue-header-left">
       <transition :name="transition">
-        <a class="mue-header-back" v-show="leftOptions.showBack"
-           @click.prevent.stop="onClickBack">{{leftOptions.backText}}</a>
+        <a class="mue-header-back" v-show="_leftOptions.showBack"
+           @click.prevent.stop="onClickBack">{{_leftOptions.backText}}</a>
       </transition>
       <transition :name="transition">
-        <div class="left-arrow" @click="onClickBack" v-show="leftOptions.showBack"></div>
+        <div class="left-arrow" @click="onClickBack" v-show="_leftOptions.showBack"></div>
       </transition>
       <slot name="left"></slot>
     </div>
@@ -25,18 +25,11 @@
 </template>
 
 <script>
+  import objectAssign from 'object-assign'
+  
   export default {
     props: {
-      leftOptions: {
-        type: Object,
-        default () {
-          return {
-            showBack: true,
-            backText: 'Back',
-            preventGoBack: false
-          }
-        }
-      },
+      leftOptions: Object,
       title: String,
       transition: String,
       rightOptions: {
@@ -46,6 +39,15 @@
             showMore: false
           }
         }
+      }
+    },
+    computed: {
+      _leftOptions () {
+        return objectAssign({
+          showBack: true,
+          preventGoBack: false,
+          backText: '返回'
+        }, this.leftOptions || {})
       }
     },
     methods: {
