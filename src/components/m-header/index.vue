@@ -1,14 +1,21 @@
 <template>
   <div class="mue-header">
     <div class="mue-header-left">
-      <a class="mue-header-back" v-show="leftOptions.showBack" :transition="transition"
-         @click.prevent.stop="onClickBack">{{leftOptions.backText}}</a>
-      <div class="left-arrow" @click="onClickBack" v-show="leftOptions.showBack" :transition="transition"></div>
+      <transition :name="transition">
+        <a class="mue-header-back" v-show="leftOptions.showBack"
+           @click.prevent.stop="onClickBack">{{leftOptions.backText}}</a>
+      </transition>
+      <transition :name="transition">
+        <div class="left-arrow" @click="onClickBack" v-show="leftOptions.showBack"></div>
+      </transition>
       <slot name="left"></slot>
     </div>
     <h1 class="mue-header-title" @click="$emit('on-click-title')">
-      <span v-show="title" :transition="transition">{{title}}</span>
-      <slot></slot>
+      <slot>
+        <transition :name="transition">
+          <span v-show="title">{{title}}</span>
+        </transition>
+      </slot>
     </h1>
     <div class="mue-header-right">
       <a class="mue-header-more" @click.prevent.stop="$emit('on-click-more')" v-if="rightOptions.showMore"></a>
@@ -46,7 +53,7 @@
         if (this.leftOptions.preventGoBack) {
           this.$emit('on-click-back')
         } else {
-          window.history.back()
+          this.$router ? this.$router.back() : window.history.back()
         }
       }
     }
