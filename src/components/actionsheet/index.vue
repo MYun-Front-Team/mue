@@ -1,9 +1,13 @@
 <template>
   <div class="m-actionsheet">
-    <div class="weui-mask weui-mask_transparent" :class="{'weui-actionsheet_toggle': show}" :style="{display: show ? 'block' : 'none'}" @click="onClickingMask"></div>
+    <transition name="vux-actionsheet-mask">
+      <div class="weui-mask weui-mask_transparent" @click="onClickingMask" v-show="show"></div>
+    </transition>
     <div class="weui-actionsheet" :class="{'weui-actionsheet_toggle': show}">
       <div class="weui-actionsheet__menu">
-        <div class="weui-actionsheet__cell" v-for="(text, key) in menus" @click="onMenuClick(text, key)" v-html="text.label || text" :class="`m-actionsheet-menu-${text.type || 'default'}`">
+        <div class="weui-actionsheet__cell m-actionsheet-menu-default" v-show="tip" v-html="tip">
+        </div>
+        <div class="weui-actionsheet__cell" v-for="(menu, key) in menus" @click="onMenuClick(menu, key)" v-html="menu.label || menu" :class="`m-actionsheet-menu-${menu.type || 'default'}`">
         </div>
       </div>
       <div class="weui-actionsheet__action" @click="emitEvent('on-click-menu', 'cancel')" v-if="showCancel">
@@ -25,7 +29,7 @@ export default {
     showCancel: Boolean,
     cancelText: {
       type: String,
-      default: 'Cancel'
+      default: '取消'
     },
     menus: {
       type: [Object, Array],
@@ -34,6 +38,10 @@ export default {
     closeOnClickingMask: {
       type: Boolean,
       default: true
+    },
+    tip: {
+      type: String,
+      default: ''
     }
   },
   data () {
@@ -42,13 +50,13 @@ export default {
     }
   },
   methods: {
-    onMenuClick (text, key) {
-      if (typeof text === 'string') {
+    onMenuClick (menu, key) {
+      if (typeof menu === 'string') {
         this.emitEvent('on-click-menu', key)
       } else {
-        if (text.type !== 'disabled' && text.type !== 'info') {
-          if (text.value) {
-            this.emitEvent('on-click-menu', text.value)
+        if (menu.type !== 'disabled' && menu.type !== 'info') {
+          if (menu.value) {
+            this.emitEvent('on-click-menu', menu.value)
           } else {
             this.show = false
           }
@@ -59,7 +67,7 @@ export default {
       this.closeOnClickingMask && (this.show = false)
     },
     emitEvent (event, menu, shouldClose = true) {
-      if (event === 'on-click-menu' && !/.noop/.test(menu)) {
+      if (event === 'on-click-menu') {
         this.$emit(event, menu)
         this.$emit(`${event}-${menu}`)
         shouldClose && (this.show = false)
