@@ -56,7 +56,7 @@
         if (typeof menu === 'string') {
           this.emitEvent('on-click-menu', key, true)
         } else {
-          if (menu.type !== 'disabled') {
+          if (menu.disable !== true) {
             this.emitEvent('on-click-menu', key, menu.global)
           }
         }
