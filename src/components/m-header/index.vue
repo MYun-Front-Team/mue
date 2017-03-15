@@ -52,7 +52,7 @@
     },
     methods: {
       onClickBack () {
-        if (this.leftOptions.preventGoBack) {
+        if (this._leftOptions.preventGoBack) {
           this.$emit('on-click-back')
         } else {
           this.$router ? this.$router.back() : window.history.back()
