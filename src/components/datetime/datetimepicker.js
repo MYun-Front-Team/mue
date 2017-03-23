@@ -42,7 +42,7 @@ var DEFAULT_CONFIG = {
   output: null,
   currentYear: NOW.getFullYear(),
   currentMonth: NOW.getMonth() + 1,
-  minYear: 2000,
+  minYear: 1970,
   maxYear: 2030,
   minHour: 0,
   maxHour: 23,
