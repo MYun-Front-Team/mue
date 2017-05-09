@@ -1,11 +1,18 @@
 <template>
   <div>
-    <alert v-model="show1"  title="Congratulations" @on-show="onShow" @on-hide="onHide">
-      <div>自定义内容</div>
+    <alert v-model="show1"  :title="title" @on-show="onShow" @on-hide="onHide">
+      <div>消息发送成功</div>
     </alert>
-    <group title="Alert">
-      <cell title="Show Me" @click.native="show1=true" is-link></cell>
-      <cell title="will auto close in 3s" @click.native="showPluginAuto" is-link></cell>
+    <alert v-model="show2"  :title="title" :content="content" @on-show="onShow" @on-hide="onHide">
+    </alert>
+    <group>
+      <cell title="显示" @click.native="show1=true" is-link></cell>
+    </group>
+    <group title="以prop:content方式调用">
+      <cell title="显示" @click.native="show2=true" is-link></cell>
+    </group>
+    <group title="以插件方式调用">
+      <cell title="3秒后自定关闭" @click.native="showPluginAuto" is-link></cell>
     </group>
   </div>
 </template>
@@ -23,26 +30,29 @@
     },
     data () {
       return {
-        show: false,
-        show1: false
+        show1: false,
+        show2: false,
+        title: '恭喜',
+        content: '启用props content'
       }
     },
     methods: {
       onHide () {
-        // console.log('on hide')
+        console.log('on hide')
       },
       onShow () {
-        // console.log('on show')
+        console.log('on show')
       },
       showPlugin () {
         this.$mue.alert.show({
           title: 'm is Cool',
           content: 'Do you agree?',
+          buttonText: '确定！！！',
           onShow () {
-            // console.log('Plugin: I\'m showing')
+            console.log('Plugin: I\'m showing')
           },
           onHide () {
-            // console.log('Plugin: I\'m hiding now')
+            console.log('Plugin: I\'m hiding now')
           }
         })
       },
