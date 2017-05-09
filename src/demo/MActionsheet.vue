@@ -1,26 +1,24 @@
 <template>
   <div>
     <group>
-      <cell title="Basic Usage" @click.native="show1=true" is-link></cell>
-      <cell title="Show cancel menu" @click.native="show2=true" is-link></cell>
-      <cell title="menu as tips" @click.native="show3=true" is-link></cell>
-      <cell title="Array menu" @click.native="show5=true" is-link></cell>
+      <cell title="基础用法" @click.native="show1=true" is-link></cell>
+      <cell title="显示取消菜单" @click.native="show2=true" is-link></cell>
+      <cell title="显示提示文字" @click.native="show3=true" is-link></cell>
+      <cell title="使用数组定义菜单" @click.native="show5=true" is-link></cell>
     </group>
     
-    <group title="prevent closing when clicking mask">
-      <cell title="Basic Usage" @click.native="show4=true" is-link></cell>
+    <group title="点击遮罩区域不自动关闭">
+      <cell title="基础用法" @click.native="show4=true" is-link></cell>
     </group>
-    
-    <actionsheet v-model="show4" :menus="menus1" :close-on-clicking-mask="false" show-cancel></actionsheet>
     
     <actionsheet v-model="show1" :menus="menus1" @on-click-menu="click"></actionsheet>
-    
-    <actionsheet v-model="show2" :menus="menus2" @on-click-menu="click" show-cancel @on-click-menu-cancel="onCancel"></actionsheet>
-    
-    <actionsheet v-model="show3" :menus="menus3" :tip="tip" @on-click-menu="click" @on-click-menu-delete="onDelete"
+    <actionsheet v-model="show2" :menus="menus2" @on-click-menu="click" show-cancel
+                 @on-click-menu-cancel="onCancel"></actionsheet>
+    <actionsheet v-model="show3" :menus="menus3" @on-click-menu="click" @on-click-menu-delete="onDelete"
                  show-cancel></actionsheet>
+    <actionsheet v-model="show4" :menus="menus1" :close-on-clicking-mask="false" show-cancel></actionsheet>
     
-    <actionsheet v-model="show5" :menus="menus5" :tip="tip" show-cancel @on-click-menu="click"></actionsheet>
+    <actionsheet v-model="show5" :menus="menus5" show-cancel @on-click-menu="click"></actionsheet>
     
     <toast v-model="showSuccess">'Deleted~'</toast>
   </div>
@@ -46,7 +44,6 @@
     },
     data () {
       return {
-        tip: 'Are you sure?<br/><span style="color:#666;font-size:.22rem;">Once deleted, you will never find it.</span>',
         show1: false,
         menus1: {
           menu1: '分享给朋友',
@@ -60,29 +57,28 @@
         show3: false,
         show4: false,
         show5: false,
-        menus5: {
-          primary: {
+        menus5: [
+          {
+            label: 'Are you sure?<br/><span style="color:#666;font-size:12px;">Once deleted, you will never find it.</span>',
+            type: 'info'
+          }, {
             label: 'Primary',
-            type: 'primary'
-          },
-          warn: {
+            type: 'primary',
+            value: 'primary'
+          }, {
             label: 'Warn',
             type: 'warn'
-          },
-          disable: {
+          }, {
             label: 'Disabled',
-            disable: true
-          },
-          default: {
+            type: 'disabled'
+          }, {
             label: 'Default'
           }
-        },
+        ],
         showSuccess: false,
         menus3: {
-          delete: {
-            label: '<span style="color:red">Delete</span>',
-            global: false
-          }
+          'title.olny-html': 'Are you sure?<br/><span style="color:#666;font-size:12px;">Once deleted, you will never find it.</span>',
+          delete: '<span style="color:red">Delete</span>'
         }
       }
     },
