@@ -53,18 +53,18 @@ const plugin = {
       }
     }
 
-    // all m's plugins are included in this.$m
-    if (!vue.$m) {
-      vue.$m = {
+    // all mue's plugins are included in this.$m
+    if (!vue.$mue) {
+      vue.$mue = {
         confirm
       }
     } else {
-      vue.$m.confirm = confirm
+      vue.$mue.confirm = confirm
     }
 
     vue.mixin({
       created: function () {
-        this.$m = vue.$m
+        this.$mue = vue.$mue
       }
     })
   }

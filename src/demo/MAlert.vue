@@ -35,7 +35,7 @@
         // console.log('on show')
       },
       showPlugin () {
-        this.$m.alert.show({
+        this.$mue.alert.show({
           title: 'm is Cool',
           content: 'Do you agree?',
           onShow () {
@@ -49,7 +49,7 @@
       showPluginAuto () {
         this.showPlugin()
         setTimeout(() => {
-          this.$m.alert.hide()
+          this.$mue.alert.hide()
         }, 3000)
       }
     }

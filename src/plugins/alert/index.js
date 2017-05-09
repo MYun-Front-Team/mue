@@ -37,17 +37,17 @@ const plugin = {
       }
     }
 
-    if (!Vue.$m) {
-      Vue.$m = {
+    if (!Vue.$mue) {
+      Vue.$mue = {
         alert
       }
     } else {
-      Vue.$m.alert = alert
+      Vue.$mue.alert = alert
     }
 
     Vue.mixin({
       created: function () {
-        this.$m = Vue.$m
+        this.$mue = Vue.$mue
       }
     })
   }

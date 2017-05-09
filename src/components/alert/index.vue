@@ -11,12 +11,14 @@
         <strong class="weui-dialog__title">{{title}}</strong>
       </div>
       <div class="weui-dialog__bd">
-        <slot></slot>
+        <slot>
+          <div v-html="content"></div>
+        </slot>
       </div>
       <div class="weui-dialog__ft">
         <a href="javascript:;"
         class="weui-dialog__btn weui-dialog__btn_primary"
-        @click="onHide">{{buttonText}}</a>
+        @click="_onHide">{{buttonText}}</a>
       </div>
     </m-dialog>
   </div>
@@ -37,6 +39,7 @@ export default {
   },
   props: {
     value: Boolean,
+    content: String,
     title: String,
     buttonText: {
       type: String,
@@ -57,7 +60,7 @@ export default {
     }
   },
   methods: {
-    onHide () {
+    _onHide () {
       this.showValue = false
     }
   },

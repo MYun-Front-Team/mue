@@ -38,18 +38,18 @@ const plugin = {
       }
     }
 
-    // all m's plugins are included in this.$m
-    if (!vue.$m) {
-      vue.$m = {
+    // all mue's plugins are included in this.$m
+    if (!vue.$mue) {
+      vue.$mue = {
         toast
       }
     } else {
-      vue.$m.toast = toast
+      vue.$mue.toast = toast
     }
 
     vue.mixin({
       created: function () {
-        this.$m = vue.$m
+        this.$mue = vue.$mue
       }
     })
   }
