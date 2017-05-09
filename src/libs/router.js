@@ -1,10 +1,18 @@
-export function go (url, $router) {
+export function go (url, $router, replace = false) {
   if (/^javas/.test(url) || !url) return
   const useRouter = typeof url === 'object' || ($router && typeof url === 'string' && !/http/.test(url))
   if (useRouter) {
-    $router.push(url)
+    if (!replace) {
+      $router.push(url)
+    } else {
+      $router.replace(url)
+    }
   } else {
-    window.location.href = url
+    if (!replace) {
+      window.location.href = url
+    } else {
+      window.location.replace(url)
+    }
   }
 }
 
