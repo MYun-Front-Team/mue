@@ -63,7 +63,7 @@
         this.closeOnClickingMask && (this.show = false)
       },
       emitEvent (event, menu, shouldClose = true) {
-        if (event === 'on-click-menu' && !/.olny-html/.test(menu)) {
+        if (event === 'on-click-menu' && !/.noop/.test(menu)) {
           this.$emit(event, menu)
           this.$emit(`${event}-${menu}`)
           shouldClose && (this.show = false)

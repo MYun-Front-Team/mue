@@ -77,7 +77,7 @@
         ],
         showSuccess: false,
         menus3: {
-          'title.olny-html': 'Are you sure?<br/><span style="color:#666;font-size:12px;">Once deleted, you will never find it.</span>',
+          'title.noop': 'Are you sure?<br/><span style="color:#666;font-size:12px;">Once deleted, you will never find it.</span>',
           delete: '<span style="color:red">Delete</span>'
         }
       }
