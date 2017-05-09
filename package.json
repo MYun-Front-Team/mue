@@ -23,16 +23,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
-    "build": "node build/build.js && rm -rf docs/demos/v2/ && mkdir docs/demos/v2 && cp -r docs/demos/temp/* docs/demos/v2/",
+    "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs",
-    "build-docs": "node build/build-docs.js",
     "build-main": "node build/build-main.js",
     "build-components": "node build/build-components.js",
     "build-styles": "node build/build-styles.js",
-    "xbuild": "npm run build-styles && npm run build-components",
-    "docs": "docute ./docs --port 8087"
+    "xbuild": "npm run build-styles && npm run build-components"
   },
   "dependencies": {
     "array-filter": "^1.0.0",
