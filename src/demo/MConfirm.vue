@@ -1,22 +1,22 @@
 <template>
   <div>
-    <confirm v-model="show" title="confirm deleting the item"
+    <confirm v-model="show" :title="title"
              @on-cancel="onCancel"
              @on-confirm="onConfirm"
              @on-show="onShow"
              @on-hide="onHide"
     >
-      <p style="text-align:center;">Are you sure?</p>
+      <p style="text-align:center;">确定要删除该商品?</p>
     </confirm>
     <br>
     <div style="padding:15px;">
-      <m-button @click.native="showPlugin" type="primary">Show</m-button>
+      <m-button @click.native="show=true" type="primary">显示</m-button>
     </div>
     <div style="padding:15px;">
-      <m-button @click.native="showPlugin2" type="primary">Hide after 3s</m-button>
+      <m-button @click.native="showPlugin" type="primary">插件方式调用</m-button>
     </div>
     <div style="padding:15px;">
-      <m-button @click.native="showPlugin3" type="primary">Hide On Blur</m-button>
+      <m-button @click.native="showPlugin1" type="primary">点击遮罩隐藏</m-button>
     </div>
   </div>
 </template>
@@ -34,50 +34,45 @@
     },
     data () {
       return {
-        show: false
+        show: false,
+        title: '删除商品'
       }
     },
     methods: {
       onCancel () {
-        // console.log('on cancel')
+        console.log('on cancel')
       },
       onConfirm () {
-        // console.log('on confirm')
+        console.log('on confirm')
       },
       onHide () {
-        // console.log('on hide')
+        console.log('on hide')
       },
       onShow () {
-        // console.log('on show')
+        console.log('on show')
       },
       showPlugin () {
-        this.$m.confirm.show({
+        this.$mue.confirm.show({
           title: 'Title',
           content: 'Content',
           cancelText: 'Cancel',
           confirmText: 'OK',
           onShow () {
-            // console.log('plugin show')
+            console.log('plugin show')
           },
           onHide () {
-            // console.log('plugin hide')
+            console.log('plugin hide')
           },
           onCancel () {
-            // console.log('plugin cancel')
+            console.log('plugin cancel')
           },
           onConfirm () {
-            // console.log('plugin confirm')
+            console.log('plugin confirm')
           }
         })
       },
-      showPlugin2 () {
-        this.showPlugin()
-        setTimeout(() => {
-          this.$m.confirm.hide()
-        }, 3000)
-      },
-      showPlugin3 () {
-        this.$m.confirm.show({
+      showPlugin1 () {
+        this.$mue.confirm.show({
           title: 'Title',
           content: 'Content',
           hideOnBlur: true

@@ -10,8 +10,8 @@
       <div class="weui-dialog__hd"><strong class="weui-dialog__title">{{title}}</strong></div>
       <div class="weui-dialog__bd"><slot><div v-html="content"></div></slot></div>
       <div class="weui-dialog__ft">
-        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default" @click="onCancel">{{cancelText}}</a>
-        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" @click="onConfirm">{{confirmText}}</a>
+        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default" @click="_onCancel">{{cancelText}}</a>
+        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" @click="_onConfirm">{{confirmText}}</a>
       </div>
     </m-dialog>
   </div>
@@ -34,8 +34,14 @@
         default: false
       },
       title: String,
-      confirmText: String,
-      cancelText: String,
+      confirmText: {
+        type: String,
+        default: '确定'
+      },
+      cancelText: {
+        type: String,
+        default: '取消'
+      },
       maskTransition: {
         type: String,
         default: 'm-fade'
@@ -66,11 +72,11 @@
       }
     },
     methods: {
-      onConfirm () {
+      _onConfirm () {
         this.showValue = false
         this.$emit('on-confirm')
       },
-      onCancel () {
+      _onCancel () {
         this.showValue = false
         this.$emit('on-cancel')
       }
