@@ -1,6 +1,6 @@
 export default {
   mounted () {
-    this.$overflowScrollingList = document.querySelectorAll('.vux-fix-safari-overflow-scrolling')
+    this.$overflowScrollingList = document.querySelectorAll('.m-fix-safari-overflow-scrolling')
   },
   methods: {
     fixSafariOverflowScrolling (type) {

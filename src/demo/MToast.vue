@@ -13,7 +13,7 @@
       <cell title="type:text" @click.native="show2=true" is-link></cell>
       <cell title="type:cancel" @click.native="show3=true" is-link></cell>
       <cell title="type:warn" @click.native="show4=true" is-link></cell>
-      <cell title="time:1s" @click.native="show5=true" is-link></cell>
+      <cell title="time:10s" @click.native="show5=true" is-link></cell>
       <cell title="long text" @click.native="show6=true" is-link></cell>
     </group>
 
@@ -21,7 +21,7 @@
     <toast v-model="show2" type="text">success</toast>
     <toast v-model="show3" type="cancel">type:cancel</toast>
     <toast v-model="show4" type="warn">type:warn</toast>
-    <toast v-model="show5" :time="10000">time:1s</toast>
+    <toast v-model="show5" :time="10000">time:10s</toast>
     <toast v-model="show6" width="4.2rem" type="long">文字提示，折行文字提示折行文字提示</toast>
 
     <group title="prop:text">
@@ -62,7 +62,7 @@
       onChange (val) {
         const _this = this
         if (val) {
-          this.$m.toast.show({
+          this.$mue.toast.show({
             text: 'Hello World',
             onShow () {
               console.log('Plugin: I\'m showing')
@@ -73,7 +73,7 @@
             }
           })
         } else {
-          this.$m.toast.hide()
+          this.$mue.toast.hide()
         }
       }
     },
