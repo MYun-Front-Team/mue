@@ -4,6 +4,7 @@
       <m-button type="primary"  action-type="button"  @click.native="show=true" >默认PopUp</m-button>
       <m-button type="primary"  action-type="button"  @click.native="show1=true" >全屏PopUp</m-button>
       <m-button type="primary"  action-type="button"  @click.native="show2=true" >带滚动条PopUp</m-button>
+      <m-button type="primary"  action-type="button"  @click.native="show3=true" >多个PopUp</m-button>
     </div>
     
     <popup v-model="show">
@@ -28,6 +29,20 @@
           <p v-for="i of 10">{{i}}</p>
         </div>
       </scroller>
+    </popup>
+  
+    <popup v-model="show3">
+      <div class="popup2">
+        <cell title="显示" @click.native="show4=true;show3=false;" is-link>显示第二个popup</cell>
+        this is the first popup
+      </div>
+    </popup>
+  
+    <popup v-model="show4">
+      <div class="popup2">
+        <cell title="显示" @click.native="show3=true;show4=false;" is-link>显示第一个popup</cell>
+        this is the second popup
+      </div>
     </popup>
   </div>
 </template>
@@ -56,6 +71,8 @@
         show: false,
         show1: false,
         show2: false,
+        show3: false,
+        show4: false,
         type: '2',
         list: [{
           src: 'http://placeholder.qiniudn.com/60x60/3cc51f/ffffff',
