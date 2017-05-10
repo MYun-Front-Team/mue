@@ -12,7 +12,6 @@
 
 
 <script>
-  import LoadMore from '../components/load-more/index.vue'
   import Loading from '../components/loading/index.vue'
   import Group from '../components/group/index.vue'
   import Cell from '../components/cell/index.vue'
@@ -20,7 +19,6 @@
 
   export default {
     components: {
-      LoadMore,
       Loading,
       Group,
       Cell,
