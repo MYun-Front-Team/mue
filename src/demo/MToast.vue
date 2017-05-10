@@ -32,7 +32,7 @@
     <toast v-model="show7" text="Hello World"></toast>
     <toast v-model="show8" type="text" text="Hello World"></toast>
 
-    <group title="As a plugin(>=v0.1.3)">
+    <group title="As a plugin">
       <cell title="default" @click.native="onChange" is-link></cell>
     </group>
   </div>
