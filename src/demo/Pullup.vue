@@ -27,7 +27,7 @@
       <div slot="pullup" class="xs-plugin-pullup-container xs-plugin-pullup-up" style="position: absolute; width: 100%; height: 40px; bottom: -40px; text-align: center;">
         <span v-show="demo4Value.pullupStatus === 'default'"></span>
         <span class="pullup-arrow" v-show="demo4Value.pullupStatus === 'default' || demo4Value.pullupStatus === 'up' || demo4Value.pullupStatus === 'down'" :class="{'rotate': demo4Value.pullupStatus === 'down'}">↑</span>
-        <span v-show="demo4Value.pullupStatus === 'loading'">123</span>
+        <span v-show="demo4Value.pullupStatus === 'loading'"><spinner type="ios-small"></spinner></span>
       </div>
     </scroller>
   
@@ -38,11 +38,13 @@
 <script>
   import Scroller from '../components/scroller/index.vue'
   import Divider from '../components/divider/index.vue'
-
+  import Spinner from '../components/spinner/index.vue'
+  
   export default {
     components: {
       Scroller,
-      Divider
+      Divider,
+      Spinner
     },
     methods: {
       load2 () {

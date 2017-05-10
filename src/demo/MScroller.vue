@@ -2,7 +2,7 @@
   <div>
     <group>
       <cell is-link title="pullup" link="/Pullup">Pullup</cell>
-      <cell is-link title="pulldown" link="/component/pulldown">Pulldown</cell>
+      <cell is-link title="pulldown" link="/Pulldown">Pulldown</cell>
       <cell is-link title="pulldownpullup" link="/component/pulldown-pullup">PulldownPullup</cell>
     </group>
     

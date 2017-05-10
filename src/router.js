@@ -302,6 +302,15 @@ const routers = [
             resolve(require('./demo/Pullup.vue'))
           })
         }
+      },
+      {
+        path: 'Pulldown',
+        name: 'Pulldown',
+        component (resolve) {
+          require.ensure(['./demo/Pulldown.vue'], () => {
+            resolve(require('./demo/Pulldown.vue'))
+          })
+        }
       }
     ]
   }
