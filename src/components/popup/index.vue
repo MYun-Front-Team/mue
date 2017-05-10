@@ -20,7 +20,7 @@ export default {
       type: String,
       default: 'auto'
     },
-    showMask: {
+    isShowMask: {
       type: Boolean,
       default: true
     },
@@ -38,7 +38,7 @@ export default {
     this.$nextTick(() => {
       const _this = this
       this.popup = new Popup({
-        showMask: _this.showMask,
+        isShowMask: _this.isShowMask,
         container: _this.$el,
         hideOnBlur: _this.hideOnBlur,
         onOpen () {

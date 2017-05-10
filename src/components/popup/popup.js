@@ -8,7 +8,7 @@ const popupDialog = function (option) {
       hideOnBlur: option.hideOnBlur,
       onOpen: option.onOpen || function () {},
       onClose: option.onClose || function () {},
-      showMask: option.showMask
+      isShowMask: option.isShowMask
     }
   }
   if (!!document.querySelectorAll('.m-popup-mask').length <= 0) {
@@ -59,7 +59,7 @@ popupDialog.prototype._bindEvents = function () {
 }
 
 popupDialog.prototype.show = function () {
-  if (this.params.showMask) {
+  if (this.params.isShowMask) {
     this.mask.classList.add('m-popup-show')
     this.mask.style['zIndex'] = 500
   }

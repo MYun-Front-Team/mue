@@ -89,7 +89,7 @@
       </div>
     </popup>
   
-    <popup v-model="show9" position="top" :show-mask="false">
+    <popup v-model="show9" position="top" :is-show-mask="false">
       <div class="position-vertical-demo">
         I'm on top. Hide in 1s.
       </div>
