@@ -1,12 +1,17 @@
 <template>
   <div>
+    <load-more tip="正在加载"></load-more>
+    <load-more :show-loading="false" tip="暂无数据" background-color="#fbf9fe"></load-more>
+    <load-more :show-loading="false" background-color="#fbf9fe"></load-more>
+    
     <group>
-      <cell title="显示" @click.native="show=true" is-link></cell>
+      <cell title="Toggle" @click.native="show1=true" @on-change="show1change" is-link></cell>
     </group>
-    <loading v-model="show" :text="text"></loading>
+    <loading v-model="show1" :text="text1"></loading>
     <div style="padding: 15px;">
       <m-button @click.native="showLoading" type="primary">显示loading(2s后关闭)</m-button>
     </div>
+  
   </div>
 </template>
 
@@ -28,32 +33,30 @@
     },
     data () {
       return {
-        show: false,
-        text: 'Processing'
-      }
-    },
-    watch: {
-      show (val) {
-        if (val) {
-          tick(0, (percent) => {
-            if (percent === 100) {
-              this.show = false
-              this.text = 'Start processing'
-              return
-            }
-            this.text = `${percent}%`
-          })
-        }
+        show1: false,
+        text1: 'Processing'
       }
     },
     methods: {
       showLoading () {
-        this.$mue.loading.show({
+        this.$m.loading.show({
           text: 'Loading'
         })
         setTimeout(() => {
-          this.$mue.loading.hide()
+          this.$m.loading.hide()
         }, 2000)
+      },
+      show1change (val) {
+        if (val) {
+          tick(0, (percent) => {
+            if (percent === 100) {
+              this.show1 = false
+              this.text1 = 'Start processing'
+              return
+            }
+            this.text1 = `${percent}%`
+          })
+        }
       }
     }
   }
