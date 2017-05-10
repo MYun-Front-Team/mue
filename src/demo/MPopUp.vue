@@ -1,15 +1,34 @@
 <template>
   <div>
     <div style="padding:15px;">
-      <m-button type="primary"  action-type="button"  @click.native="show=true" >弹出PopUp</m-button>
+      <m-button type="primary"  action-type="button"  @click.native="show=true" >默认PopUp</m-button>
+      <m-button type="primary"  action-type="button"  @click.native="show1=true" >全屏PopUp</m-button>
+      <m-button type="primary"  action-type="button"  @click.native="show2=true" >带滚动条PopUp</m-button>
     </div>
-    <popup v-model="show" height="10rem">
+    
+    <popup v-model="show">
       <div class="popup0">
         <panel header="图文组合列表"  :list="list" :type="type"></panel>
         <div style="text-align: center; padding: .24rem"><a href="javascript:;" @click="show=false"><icon type="cancel" ></icon> 关闭</a> </div>
       </div>
     </popup>
-
+  
+    <popup v-model="show1" height="100%">
+      <div class="popup1">
+        <group>
+          <cell>全屏PopUp</cell>
+          <div style="text-align: center; padding: .24rem"><a href="javascript:;" @click="show1=false"><icon type="cancel" ></icon> 关闭</a> </div>
+        </group>
+      </div>
+    </popup>
+  
+    <popup v-model="show2" height="200px" @on-first-show="resetScroller">
+      <scroller height="100px" lock-x style="border:1px solid red;" ref="scroller">
+        <div>
+          <p v-for="i of 10">{{i}}</p>
+        </div>
+      </scroller>
+    </popup>
   </div>
 </template>
 
@@ -18,17 +37,25 @@
   import MButton from '../components/m-button/index.vue'
   import Popup from '../components/popup/index.vue'
   import Panel from '../components/panel/index.vue'
+  import Cell from '../components/cell/index.vue'
+  import Group from '../components/group/index.vue'
+  import Scroller from '../components/scroller/index.vue'
 
   export default {
     components: {
       MButton,
       Popup,
       Icon,
-      Panel
+      Panel,
+      Cell,
+      Group,
+      Scroller
     },
     data () {
       return {
         show: false,
+        show1: false,
+        show2: false,
         type: '2',
         list: [{
           src: 'http://placeholder.qiniudn.com/60x60/3cc51f/ffffff',
@@ -47,6 +74,11 @@
       }
     },
     methods: {
+      resetScroller () {
+        this.$nextTick(() => {
+          this.$refs.scroller.reset()
+        })
+      }
     }
   }
 </script>
