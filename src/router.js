@@ -284,6 +284,24 @@ const routers = [
             resolve(require('./demo/MLoad.vue'))
           })
         }
+      },
+      {
+        path: 'MScroller',
+        name: 'MScroller',
+        component (resolve) {
+          require.ensure(['./demo/MScroller.vue'], () => {
+            resolve(require('./demo/MScroller.vue'))
+          })
+        }
+      },
+      {
+        path: 'Pullup',
+        name: 'Pullup',
+        component (resolve) {
+          require.ensure(['./demo/Pullup.vue'], () => {
+            resolve(require('./demo/Pullup.vue'))
+          })
+        }
       }
     ]
   }

@@ -30,6 +30,7 @@
     <router-link to="/MToast">MToast</router-link>
     <router-link to="/MActionsheet">MActionsheet</router-link>
     <router-link to="/MLoad">MLoad</router-link>
+    <router-link to="/MScroller">MScroller</router-link>
   </div>
 </template>
 
