@@ -3,7 +3,7 @@
     <group>
       <cell is-link title="pullup" link="/Pullup">Pullup</cell>
       <cell is-link title="pulldown" link="/Pulldown">Pulldown</cell>
-      <cell is-link title="pulldownpullup" link="/component/pulldown-pullup">PulldownPullup</cell>
+      <cell is-link title="pulldownpullup" link="/PullUpDown">PulldownPullup</cell>
     </group>
     
     <divider>{{ '不带滚动条水平Scroller' }}</divider>
