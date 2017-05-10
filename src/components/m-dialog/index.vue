@@ -30,7 +30,7 @@ export default {
     dialogStyle: Object,
     scroll: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   created () {
