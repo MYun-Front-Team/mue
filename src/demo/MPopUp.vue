@@ -1,7 +1,8 @@
 <template>
-  <div style="padding: .24rem;">
-    <m-button type="primary"  action-type="button"  @click.native="show=true" >弹出PopUp</m-button>
-
+  <div>
+    <div style="padding:15px;">
+      <m-button type="primary"  action-type="button"  @click.native="show=true" >弹出PopUp</m-button>
+    </div>
     <popup v-model="show" height="10rem">
       <div class="popup0">
         <panel header="图文组合列表"  :list="list" :type="type"></panel>
