@@ -1,11 +1,10 @@
 <template>
-  <div class="m-x-dialog fix_ios_fixed" @touchmove="onTouchMove">
+  <div class="m-x-dialog" @touchmove="onTouchMove">
     <transition :name="maskTransition">
       <div class="weui-mask" @click="hideOnBlur && (currentValue = false)" v-show="currentValue"></div>
     </transition>
-    <input style="display:none" v-model="currentValue">
     <transition :name="dialogTransition">
-      <div class="weui-dialog" v-show="currentValue" >
+      <div class="weui-dialog" v-show="currentValue" :style="dialogStyle">
         <slot></slot>
       </div>
     </transition>
@@ -28,6 +27,7 @@ export default {
       default: 'm-dialog'
     },
     hideOnBlur: Boolean,
+    dialogStyle: Object,
     scroll: {
       type: Boolean,
       default: true
@@ -39,8 +39,11 @@ export default {
     }
   },
   watch: {
-    value (val) {
-      this.currentValue = val
+    value: {
+      handler: function (val) {
+        this.currentValue = val
+      },
+      immediate: true
     },
     currentValue (val) {
       this.$emit(val ? 'on-show' : 'on-hide')
