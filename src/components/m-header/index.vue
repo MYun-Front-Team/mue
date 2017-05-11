@@ -1,13 +1,15 @@
 <template>
   <div class="mue-header">
     <div class="mue-header-left">
-      <transition :name="transition">
-        <a class="mue-header-back" v-show="_leftOptions.showBack"
-           @click.prevent.stop="onClickBack">{{_leftOptions.backText}}</a>
-      </transition>
-      <transition :name="transition">
-        <div class="left-arrow" @click="onClickBack" v-show="_leftOptions.showBack"></div>
-      </transition>
+      <slot name="overwrite-left">
+        <transition :name="transition">
+          <a class="mue-header-back" v-show="_leftOptions.showBack"
+             @click.prevent.stop="onClickBack">{{_leftOptions.backText}}</a>
+        </transition>
+        <transition :name="transition">
+          <div class="left-arrow" @click="onClickBack" v-show="_leftOptions.showBack"></div>
+        </transition>
+      </slot>
       <slot name="left"></slot>
     </div>
     <h1 class="mue-header-title" @click="$emit('on-click-title')">
