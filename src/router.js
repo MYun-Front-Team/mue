@@ -320,6 +320,15 @@ const routers = [
             resolve(require('./demo/PullUpDown.vue'))
           })
         }
+      },
+      {
+        path: 'ViewBox',
+        name: 'ViewBox',
+        component (resolve) {
+          require.ensure(['./demo/ViewBox.vue'], () => {
+            resolve(require('./demo/ViewBox.vue'))
+          })
+        }
       }
     ]
   }

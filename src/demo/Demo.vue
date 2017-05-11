@@ -31,6 +31,7 @@
     <router-link to="/MActionsheet">MActionsheet</router-link>
     <router-link to="/MLoad">MLoad</router-link>
     <router-link to="/MScroller">MScroller</router-link>
+    <router-link to="/ViewBox">ViewBox</router-link>
   </div>
 </template>
 
