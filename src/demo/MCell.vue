@@ -17,7 +17,22 @@
     <group>
       <cell title="接受通知" value="已启用"></cell>
     </group>
-
+  
+    <group title="折叠">
+      <cell
+        title="标题一"
+        is-link
+        :border-intent="false"
+        :arrow-direction="showContent001 ? 'up' : 'down'"
+        @click.native="showContent001 = !showContent001"></cell>
+  
+      <template v-if="showContent001">
+        <cell-box :border-intent="false" class="sub-item" is-link>content 001</cell-box>
+        <cell-box class="sub-item" is-link>content 002</cell-box>
+        <cell-box class="sub-item" is-link>content 003</cell-box>
+      </template>
+    </group>
+    
     <group title="使用slot显示复杂内容">
       <cell title="slot content">
         <div slot="value">
@@ -37,11 +52,18 @@
 <script>
   import Group from '../components/group/index.vue'
   import Cell from '../components/cell/index.vue'
+  import CellBox from '../components/cell-box/index.vue'
 
   export default {
+    data () {
+      return {
+        showContent001: false
+      }
+    },
     components: {
       Group,
-      Cell
+      Cell,
+      CellBox
     },
     methods: {
       onClick () {
