@@ -247,7 +247,7 @@
     font-size: 16px;
     height: 34px;
     line-height: 34px;
-    color: #000;
+    color: #333;
   }
   
   .scroller-indicator {
@@ -271,7 +271,7 @@
     left: 0;
     bottom: 0;
     z-index: 10000;
-    background-color: #fff;
+    background-color: #eee;
     display: none;
     transition: transform 0.3s ease;
     transform: translateY(100%);
