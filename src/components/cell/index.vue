@@ -87,6 +87,7 @@ export default {
 @import '../../styles/tap.less';
 @import '../../styles/weui/base/mixin/setArrow.less';
 @import '../../styles/weui/widget/weui_cell/weui_cell_global.less';
+@import '../../styles/weui/widget/weui-loading/weui-loading.less';
 
 .m-cell-primary {
   flex: 1;

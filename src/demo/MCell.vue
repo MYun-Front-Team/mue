@@ -2,6 +2,7 @@
   <div>
     <group>
       <cell title="My Account" value="Protected" @click.native="onClick"></cell>
+      <cell title="Money" @click.native="onClick" :is-loading="true"></cell>
     </group>
 
     <group title="use is-link to show arrow">
