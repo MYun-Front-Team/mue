@@ -32,6 +32,8 @@
     <router-link to="/MLoad">MLoad</router-link>
     <router-link to="/MScroller">MScroller</router-link>
     <router-link to="/ViewBox">ViewBox</router-link>
+    <router-link to="/CellFormPreview">CellFormPreview</router-link>
+    <router-link to="/FormPreview">FormPreview</router-link>
   </div>
 </template>
 

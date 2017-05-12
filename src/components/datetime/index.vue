@@ -209,15 +209,14 @@
 
 <style lang="less">
   @import '../../styles/variable.less';
-  
+
   .scroller-component {
     display: block;
     position: relative;
-    height: 238px;
     overflow: hidden;
     width: 100%;
   }
-  
+
   .scroller-content {
     position: absolute;
     left: 0;
@@ -225,7 +224,7 @@
     width: 100%;
     z-index: -1;
   }
-  
+
   .scroller-mask {
     position: absolute;
     left: 0;
@@ -241,21 +240,17 @@
     background-size: 100% 102px;
     background-repeat: no-repeat;
   }
-  
+
   .scroller-item {
     text-align: center;
-    font-size: 16px;
-    height: 34px;
-    line-height: 34px;
+    font-size: .24rem;
     color: #333;
   }
-  
+
   .scroller-indicator {
     width: 100%;
-    height: 34px;
     position: absolute;
     left: 0;
-    top: 102px;
     z-index: 3;
     background-image:
       linear-gradient(to bottom, #d0d0d0, #d0d0d0, transparent, transparent),
@@ -264,7 +259,7 @@
     background-size: 100% 1px;
     background-repeat: no-repeat;
   }
-  
+
   .dp-container {
     position: fixed;
     width: 100%;
@@ -276,7 +271,7 @@
     transition: transform 0.3s ease;
     transform: translateY(100%);
   }
-  
+
   .dp-mask {
     z-index: 998;
     position: fixed;
@@ -289,7 +284,7 @@
     background-color: #000;
     z-index: 9999;
   }
-  
+
   .dp-header {
     display: flex;
     width: 100%;
@@ -300,42 +295,91 @@
     background-size: 100% 1px;
     background-repeat: no-repeat;
   }
-  
+
   .dp-header .dp-item {
     color: @datetime-header-item-font-color;
-    font-size: 18px;
-    height: 44px;
-    line-height: 44px;
+    font-size: .26rem;
+    height: .68rem;
+    line-height: .68rem;
     cursor: pointer;
   }
-  
+
   .dp-header .dp-item.dp-left {
     color: @datetime-header-item-cancel-font-color;
   }
-  
+
   .dp-header .dp-item.dp-right {
     color: @datetime-header-item-confirm-font-color;
   }
-  
+
   .dp-content {
     display: flex;
     width: 100%;
     box-align: center;
     align-items: center;
-    padding: 10px 0;
   }
-  
+
   .dp-header .dp-item,
   .dp-content .dp-item {
     box-sizing: border-box;
     flex: 1;
     text-align: center;
   }
-  
+
   .m-datetime .m-input-icon {
     float: right;
   }
   .m-cell-primary {
     flex: 1;
+  }
+
+  @media screen and (min-width:320px) {
+    .scroller-component{ height: 175px;}
+    .scroller-item {
+      height: 25px;
+      line-height: 25px;
+    }
+    .scroller-mask{ background-size: 100% 75px;}
+    .scroller-indicator{ height: 25px; top: 75px;}
+  }
+
+  @media screen and (min-width:360px) {
+    .scroller-component{ height: 182px;}
+    .scroller-item {
+      height: 26px;
+      line-height: 26px;
+    }
+    .scroller-mask{ background-size: 100% 78px;}
+    .scroller-indicator{ height: 26px; top: 78px;}
+  }
+
+  @media screen and (min-width:375px) {
+    .scroller-component{ height: 203px;}
+    .scroller-item {
+      height: 29px;
+      line-height: 29px;
+    }
+    .scroller-mask{ background-size: 100% 87px;}
+    .scroller-indicator{ height: 29px; top: 87px;}
+  }
+
+  @media screen and (min-width:414px) {
+    .scroller-component{ height: 238px;}
+    .scroller-item {
+      height: 34px;
+      line-height: 34px;
+    }
+    .scroller-mask{ background-size: 100% 102px;}
+    .scroller-indicator{ height: 34px; top: 102px;}
+  }
+
+  @media screen and (min-width:480px) {
+    .scroller-component{ height: 273px;}
+    .scroller-item {
+      height: 39px;
+      line-height: 39px;
+    }
+    .scroller-mask{ background-size: 100% 117px;}
+    .scroller-indicator{ height: 39px; top: 117px;}
   }
 </style>

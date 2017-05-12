@@ -329,6 +329,24 @@ const routers = [
             resolve(require('./demo/ViewBox.vue'))
           })
         }
+      },
+      {
+        path: 'CellFormPreview',
+        name: 'CellFormPreview',
+        component (resolve) {
+          require.ensure(['./demo/CellFormPreview.vue'], () => {
+            resolve(require('./demo/CellFormPreview.vue'))
+          })
+        }
+      },
+      {
+        path: 'FormPreview',
+        name: 'FormPreview',
+        component (resolve) {
+          require.ensure(['./demo/FormPreview.vue'], () => {
+            resolve(require('./demo/FormPreview.vue'))
+          })
+        }
       }
     ]
   }
