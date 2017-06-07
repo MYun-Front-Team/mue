@@ -52,4 +52,7 @@ export default {
   vertical-align: baseline;
   display: inline-block;
 }
+.weui-loading_toast  .weui-toast{
+  border-radius:.1rem;
+}
 </style>

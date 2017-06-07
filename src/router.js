@@ -347,6 +347,24 @@ const routers = [
             resolve(require('./demo/FormPreview.vue'))
           })
         }
+      },
+      {
+        path: 'login',
+        name: 'login',
+        component (resolve) {
+          require.ensure(['./demo/login.vue'], () => {
+            resolve(require('./demo/login.vue'))
+          })
+        }
+      },
+      {
+        path: 'resetPassword',
+        name: 'resetPassword',
+        component (resolve) {
+          require.ensure(['./demo/reset-password.vue'], () => {
+            resolve(require('./demo/reset-password.vue'))
+          })
+        }
       }
     ]
   }

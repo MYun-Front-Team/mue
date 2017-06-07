@@ -106,5 +106,5 @@
 
 
 <style>
-  .my-wrapper{ padding: .24rem;}
+  .my-wrapper{ padding: .24rem; box-sizing: border-box;}
 </style>

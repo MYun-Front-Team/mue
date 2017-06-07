@@ -34,15 +34,34 @@
     <router-link to="/ViewBox">ViewBox</router-link>
     <router-link to="/CellFormPreview">CellFormPreview</router-link>
     <router-link to="/FormPreview">FormPreview</router-link>
+
+    <div style="clear: both;">
+      <divider>Frequently Used Pages</divider>
+    </div>
+
+    <div class="router-view">
+      <router-link to="/login">Login</router-link>
+      <router-link to="/resetPassword">Reset Password</router-link>
+    </div>
   </div>
+
+
+
+
+
 </template>
 
 <style>
-  #app>.router-view> a{ float: left; width: 25%; padding-bottom: .24rem;}
+  .router-view  a{ float: left; width: 25%; padding-bottom: .24rem;}
 </style>
 
 <script>
+  import Divider from '../components/divider/index'
+
   export default {
+    components: {
+      Divider
+    },
     data () {
       return {}
     }

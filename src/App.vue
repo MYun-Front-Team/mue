@@ -1,14 +1,12 @@
 <template>
-  <div id="app">
     <transition :name="'m-pop-' + (direction === 'forward' ? 'in' : 'out')">
       <router-view class="router-view"></router-view>
     </transition>
-  </div>
 </template>
 
 <script>
   import { mapState } from 'vuex'
-  
+
   export default {
     name: 'app',
     computed: {
@@ -31,12 +29,18 @@
   body {
     background-color: #efeff4;
   }
+  html,body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
 
   /**
 * vue-router transition
 */
   .router-view {
     width: 100%;
+    box-sizing: border-box;
     animation-duration: 0.5s;
     animation-fill-mode: both;
     backface-visibility: hidden;

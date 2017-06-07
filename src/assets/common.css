@@ -1,0 +1,75 @@
+/*全局样式*/
+.h-100 {
+  min-height: 100%;
+}
+.m-pad-24 {
+  padding: 0.24rem;
+}
+.m-pad-t24 {
+  padding-top: 0.24rem;
+}
+.m-pull-left {
+  display: inline;
+  float: left;
+}
+.m-pull-right {
+  display: inline;
+  float: right;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.m-24-text {
+  font-size: 0.24rem !important;
+}
+.m-color-text {
+  color: #ffba00;
+}
+/*注册页面样式*/
+.m-login-form {
+  overflow: hidden;
+}
+.m-login-form .icon {
+  font-size: .3rem;
+  padding-right: .2rem;
+}
+.m-login-form .icon-eye {
+  color: #999;
+}
+.m-login-form .icon-eye.on {
+  color: #ffba00;
+}
+.m-login-form .weui-cell__ft .m-24-text {
+  padding: 0.1rem 0 0.1rem 0.24rem;
+}
+/*iconfont*/
+@font-face {
+  font-family: 'icon';
+  /* project id 320322 */
+  src: url('//at.alicdn.com/t/font_czfmbuuyyc5qxgvi.eot');
+  src: url('//at.alicdn.com/t/font_czfmbuuyyc5qxgvi.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_czfmbuuyyc5qxgvi.woff') format('woff'), url('//at.alicdn.com/t/font_czfmbuuyyc5qxgvi.ttf') format('truetype'), url('//at.alicdn.com/t/font_czfmbuuyyc5qxgvi.svg#iconfont') format('svg');
+}
+.icon {
+  font-family: "icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-mobile:before {
+  content: "\e600";
+}
+.icon-lock:before {
+  content: "\e601";
+}
+.icon-idcode:before {
+  content: "\e602";
+}
+.icon-eye:before {
+  content: "\e603";
+}
