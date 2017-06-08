@@ -41,7 +41,10 @@
 
     <div class="router-view">
       <router-link to="/login">Login</router-link>
-      <router-link to="/resetPassword">Reset Password</router-link>
+      <router-link to="/resetPassword">Reset PSW</router-link>
+      <router-link to="/goodsListA">Goods List(A)</router-link>
+      <router-link to="/goodsListB">Goods List(B)</router-link>
+      <router-link to="/goodsListC">Goods List(C)</router-link>
     </div>
   </div>
 
@@ -52,7 +55,7 @@
 </template>
 
 <style>
-  .router-view  a{ float: left; width: 25%; padding-bottom: .24rem;}
+  .router-view > a{ float: left; width: 25%; padding-bottom: .24rem;}
 </style>
 
 <script>

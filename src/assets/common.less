@@ -1,22 +1,50 @@
 @mainColor: #ffba00;
 @mainGap: .24rem;
 
-/*全局样式*/
-.h-100{ min-height: 100%;}
+/*------------------------------------全局样式定义------------------------------------------*/
+.m-h100{ min-height: 100%;}
 
+/*图片自适应*/
+.m-img-auto img{ width: 100%; height: auto;}
+
+
+/*padding间距定义*/
 .m-pad-24{ padding: @mainGap;}
 .m-pad-t24{ padding-top: @mainGap;}
 
+/*左右浮动定义*/
 .m-pull-left{  display: inline;float: left;}
 .m-pull-right{  display: inline;float: right;}
-.clearfix:before,
-.clearfix:after {  content: " ";  display: table;  }
-.clearfix:after {  clear: both;  }
 
+/*清除浮动定义*/
+.m-clearfix:before,
+.m-clearfix:after {  content: " ";  display: table;  }
+.m-clearfix:after {  clear: both;  }
+
+/*字体大小定义*/
+.m-18-text{ font-size: .18rem !important;}
+.m-20-text{ font-size: .20rem !important;}
+.m-22-text{ font-size: .22rem !important;}
 .m-24-text{ font-size: @mainGap !important;}
+.m-25-text{ font-size: .25rem !important;}
+.m-26-text{ font-size: .26rem !important;}
 
+/*字体颜色定义*/
 .m-color-text{ color: @mainColor;}
+.m-gray-text{ color: #999;}
+.m-orange-text{ color: #fc6800;}
 
+/*字体样式定义*/
+.m-line-cross{ text-decoration: line-through;}
+
+
+/*单行，多行文字文字溢出定义*/
+.m-ellipsis{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis;word-wrap: normal;}
+.m-ellipsis-2l{ overflow: hidden;  text-overflow: ellipsis;  display: -webkit-box;  -webkit-line-clamp: 2;  -webkit-box-orient: vertical;}
+.m-ellipsis-3l{ overflow: hidden;  text-overflow: ellipsis;  display: -webkit-box;  -webkit-line-clamp: 3;  -webkit-box-orient: vertical;}
+
+
+/*------------------------------------常用页面样式定义------------------------------------------*/
 /*注册页面样式*/
 .m-login-form{ overflow: hidden;}
 .m-login-form .icon{ font-size: .3rem; padding-right: .2rem;}
@@ -24,17 +52,52 @@
 .m-login-form .icon-eye.on{ color: @mainColor;}
 .m-login-form .weui-cell__ft .m-24-text{ padding: .1rem 0 .1rem @mainGap}
 
+/*商品列表页面样式*/
+.m-goods-list>li{ background: #fff; line-height: 1.16; padding: @mainGap; box-sizing: border-box; overflow: hidden;}
+.m-goods-list>li> a .m-goods_info h3,.m-goods-list-type3 >li .m-goods_info .m-goods-h3 h3 a{ font-weight: normal; color: #333;}
+.m-goods-list>li> a .m-goods_info>.m-ellipsis.m-22-text{ padding:.17rem 0 .24rem}
+.m-goods-list-type1 .m-goods_img{ width: 2.49rem; height: 1.87rem; position: relative; font-size: 0;}
+.m-goods-list-type1 .m-goods_img img{ width: 100%;height: 100%;}
+.m-goods-list-type1 .m-goods_info{ width: 54%;}
+.m-goods-list-outStore .m-goods_info,.m-goods-list-outStore .m-goods_info .m-orange-text,.m-goods-list-outStore  .m-goods_info h3,
+.m-goods-list-type3 >li.m-goods-list-outStore  .m-goods_info .m-goods-h3 h3 a{ color: #b9b9b9 !important;}
+.m-goods-list-outStore .m-goods_img .m-goods_img-tag{ position: absolute; background: url("../assets/images/tag-out.png") no-repeat; top: .14rem; left: -.04rem; width: .81rem; height: .42rem; background-size: 100% 100%;}
+.m-goods-list-outStore .m-goods_img .m-goods_img-tips{ position: absolute; line-height: 1.8; background: rgba(0,0,0,0.4); color: #fff; text-align: center; width: 100%; bottom: 0;left: 0;}
+
+.m-goods-list-type2{ background: #fff; overflow: hidden;}
+.m-goods-list-type2>li{ float: left; width: 33.3333%; padding: 0;border-right:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; }
+.m-goods-list-type2>li:nth-child(3n){ border-right:0; }
+.m-goods-list-type2>li>a{ margin: .2rem; display: block; padding-bottom: .3rem; }
+.m-goods-list-type2 .m-goods_img{ position: relative; font-size: 0; height: 2.18rem;}
+.m-goods-list-type2 .m-goods_img img,.m-goods-list-type3 .m-goods_img img{ height: 100%;}
+.m-goods-list-type2 >li>a .m-goods_info .m-goods-h3{height: .56rem;margin: .14rem 0;overflow: hidden;  }
+.m-goods-list-type2 .m-goods_info-price .m-line-cross{ line-height: .25rem;}
+
+.m-goods-list-type3{ overflow: hidden;}
+.m-goods-list-type3>li{ background: transparent; float: left; width: 50%; padding: 0 .07rem .07rem 0; box-sizing: border-box;}
+.m-goods-list-type3>li:nth-child(2n){ padding-right: 0;}
+.m-goods-list-type3>li .m-goods-list_box{ background: #fff; padding: @mainGap;}
+.m-goods-list-type3 .m-goods_img{position: relative; font-size: 0; height: 2.84rem;}
+.m-goods-list-type3 >li .m-goods_info .m-goods-h3{height: .56rem;margin: .24rem 0 .2rem 0;overflow: hidden;  }
+.m-goods-list-type3 >li .m-goods_info-price{ overflow: hidden;}
+.m-goods-list-type3 >li .m-goods_info-price .m-line-cross{ display: block;}
+.m-goods-list-type3 >li .m-goods_info-price .icon-cart{ width: .58rem; height: .58rem; overflow: hidden; border-radius:50%; background: @mainColor;
+  color: #fff; display: block; text-align: center; font-size: .32rem; line-height: .58rem;}
+.m-goods-list-type3 >li.m-goods-list-outStore .m-goods_info-price .icon-cart{ background: #dfdfdf;}
+
+
+
 
 
 
 /*iconfont*/
 @font-face {
   font-family: 'icon';  /* project id 320322 */
-  src: url('//at.alicdn.com/t/font_czfmbuuyyc5qxgvi.eot');
-  src: url('//at.alicdn.com/t/font_czfmbuuyyc5qxgvi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_czfmbuuyyc5qxgvi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_czfmbuuyyc5qxgvi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_czfmbuuyyc5qxgvi.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1idxu7l8reo8ncdi.eot');
+  src: url('//at.alicdn.com/t/font_1idxu7l8reo8ncdi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1idxu7l8reo8ncdi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1idxu7l8reo8ncdi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1idxu7l8reo8ncdi.svg#iconfont') format('svg');
 }
 
 .icon {
@@ -50,6 +113,8 @@
 .icon-lock:before { content: "\e601"; }
 
 .icon-idcode:before { content: "\e602"; }
+
+.icon-cart:before { content: "\e60c"; }
 
 .icon-eye:before { content: "\e603"; }
 

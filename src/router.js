@@ -365,6 +365,33 @@ const routers = [
             resolve(require('./demo/reset-password.vue'))
           })
         }
+      },
+      {
+        path: 'goodsListA',
+        name: 'goodsListA',
+        component (resolve) {
+          require.ensure(['./demo/goods-list-a.vue'], () => {
+            resolve(require('./demo/goods-list-a.vue'))
+          })
+        }
+      },
+      {
+        path: 'goodsListB',
+        name: 'goodsListB',
+        component (resolve) {
+          require.ensure(['./demo/goods-list-b.vue'], () => {
+            resolve(require('./demo/goods-list-b.vue'))
+          })
+        }
+      },
+      {
+        path: 'goodsListC',
+        name: 'goodsListC',
+        component (resolve) {
+          require.ensure(['./demo/goods-list-c.vue'], () => {
+            resolve(require('./demo/goods-list-c.vue'))
+          })
+        }
       }
     ]
   }

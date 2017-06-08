@@ -1,5 +1,5 @@
 <template>
-  <div class="h-100">
+  <div class="m-h100">
     <group title="" class="m-login-form">
       <m-input  placeholder="请输入手机号码">
         <span slot="label" class="icon icon-mobile"></span>
