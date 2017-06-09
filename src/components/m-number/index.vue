@@ -153,7 +153,6 @@ export default {
 }
 .m-number-selector-plus {
   border-left:none;
-  margin-right: 5px;
   padding:.03rem .12rem;
   border-radius:0 2px 2px 0;
 }

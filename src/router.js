@@ -392,6 +392,33 @@ const routers = [
             resolve(require('./demo/goods-list-c.vue'))
           })
         }
+      },
+      {
+        path: 'cartA',
+        name: 'cartA',
+        component (resolve) {
+          require.ensure(['./demo/cart-a.vue'], () => {
+            resolve(require('./demo/cart-a.vue'))
+          })
+        }
+      },
+      {
+        path: 'cartB',
+        name: 'cartB',
+        component (resolve) {
+          require.ensure(['./demo/cart-b.vue'], () => {
+            resolve(require('./demo/cart-b.vue'))
+          })
+        }
+      },
+      {
+        path: 'bookList',
+        name: 'bookList',
+        component (resolve) {
+          require.ensure(['./demo/book-list.vue'], () => {
+            resolve(require('./demo/book-list.vue'))
+          })
+        }
       }
     ]
   }

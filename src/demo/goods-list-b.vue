@@ -1,18 +1,36 @@
 <template>
   <div class="m-h100">
-    <goodsList type="2" :list=list></goodsList>
+    <ul class="m-goods-list m-goods-list-type2">
+      <li  :class="item.outStore? 'm-goods-list-outStore': ''"  v-for="item in list">
+        <a :href="getUrl(item.url)"  @click.prevent="onItemClick(item)" >
+          <div class="m-goods_img m-img-auto">
+            <span class="m-goods_img-tag" v-if="item.outStore"></span>
+            <img class="m-goods_img-big"  :src="item.src" alt="">
+            <p class="m-goods_img-tips m-22-text" v-if="item.outStore">已售罄</p>
+          </div>
+          <div class="m-goods_info">
+            <div class="m-goods-h3">
+              <h3 class="m-ellipsis-2l m-20-text">{{item.title}}</h3>
+            </div>
+            <div class="m-goods_info-price">
+              <p class="m-22-text m-pull-left m-orange-text">{{item.price}}</p>
+              <p class="m-18-text m-pull-right m-gray-text m-line-cross">{{item.oldPrice}}</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
   </div>
 
 </template>
 
 
 <script>
-  import GoodsList from '../components/m-goods-list/index.vue'
   import imgSrc from '../assets/images/goods.png'
+  import { go, getUrl } from '../libs/router'
 
   export default {
     components: {
-      GoodsList,
       imgSrc
     },
     data () {
@@ -72,7 +90,17 @@
 
     },
     methods: {
-
+      getUrl (url) {
+        return getUrl(url, this.$router)
+      },
+      onItemClick (item) {
+        this.$emit('on-click-item', item)
+        go(item.url, this.$router)
+      },
+      onItemClickCart (item) {
+        this.$emit('on-click-item', item)
+        go(item.urlCart, this.$router)
+      }
     }
   }
 </script>
