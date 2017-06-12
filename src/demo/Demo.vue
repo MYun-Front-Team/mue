@@ -48,6 +48,7 @@
       <router-link to="/cartA">Cart(A)</router-link>
       <router-link to="/cartB">Cart(B)</router-link>
       <router-link to="/bookList">Book List</router-link>
+      <router-link to="/addressList">Address List</router-link>
     </div>
   </div>
 

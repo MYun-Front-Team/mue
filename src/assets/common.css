@@ -475,6 +475,45 @@ li {
 .m-book-list_footer > .m-pull-left {
   line-height: .52rem;
 }
+/*地址列表页面样式*/
+.m-address-list > li {
+  background: #fff;
+  position: relative;
+  margin-bottom: .2rem;
+  overflow: hidden;
+  padding: .24rem;
+}
+.m-address-list .m-check {
+  position: relative;
+}
+.m-address-list .m-address-list_info {
+  width: 72%;
+  margin-left: .64rem;
+}
+.m-address-list .m-pull-right .icon-edit {
+  font-size: .3rem;
+  padding-right: .1rem;
+}
+.m-address_tag-default {
+  display: none;
+  position: absolute;
+  right: -0.43rem;
+  bottom: -0.18rem;
+  background: #ffba00;
+  color: #fff;
+  font-size: .18rem;
+  padding: .08rem .4rem .2rem .4rem;
+  height: .4rem;
+  transform: rotate(-45deg) scale(0.85);
+}
+@media screen and (min-width: 320px) and (max-width: 340px) {
+  .m-address_tag-default {
+    bottom: -0.13rem;
+  }
+}
+.m-address-default .m-address_tag-default {
+  display: block;
+}
 /*-------------------------------------------第三方checkbox样式引入-----------------------------------------*/
 @keyframes hover-color {
   from {
@@ -612,8 +651,8 @@ li {
 @font-face {
   font-family: 'icon';
   /* project id 320322 */
-  src: url('//at.alicdn.com/t/font_117wq3lxr4szto6r.eot');
-  src: url('//at.alicdn.com/t/font_117wq3lxr4szto6r.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_117wq3lxr4szto6r.woff') format('woff'), url('//at.alicdn.com/t/font_117wq3lxr4szto6r.ttf') format('truetype'), url('//at.alicdn.com/t/font_117wq3lxr4szto6r.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_kqt2ro7khli60f6r.eot');
+  src: url('//at.alicdn.com/t/font_kqt2ro7khli60f6r.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_kqt2ro7khli60f6r.woff') format('woff'), url('//at.alicdn.com/t/font_kqt2ro7khli60f6r.ttf') format('truetype'), url('//at.alicdn.com/t/font_kqt2ro7khli60f6r.svg#iconfont') format('svg');
 }
 .icon {
   font-family: "icon" !important;
@@ -633,6 +672,9 @@ li {
 }
 .icon-cart:before {
   content: "\e60c";
+}
+.icon-edit:before {
+  content: "\e616";
 }
 .icon-close:before {
   content: "\e64c";

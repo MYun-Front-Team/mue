@@ -419,6 +419,15 @@ const routers = [
             resolve(require('./demo/book-list.vue'))
           })
         }
+      },
+      {
+        path: 'addressList',
+        name: 'addressList',
+        component (resolve) {
+          require.ensure(['./demo/address-list.vue'], () => {
+            resolve(require('./demo/address-list.vue'))
+          })
+        }
       }
     ]
   }
