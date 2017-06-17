@@ -1,0 +1,372 @@
+/**
+* actionsheet
+*/
+/**
+* datetime
+*/
+/**
+* tabbar
+*/
+/**
+* tab
+*/
+/**
+* dialog
+*/
+/**
+* x-number
+*/
+/**
+* checkbox
+*/
+/**
+* check-icon
+*/
+/**
+* Cell
+*/
+/**
+* Mask
+*/
+/**
+* Range
+*/
+/**
+* Tabbar
+*/
+/**
+* Header
+*/
+/**
+* Timeline
+*/
+/**
+* Switch
+*/
+/**
+* Button
+*/
+/**
+* swipeout
+*/
+/**
+* Cell
+*/
+/**
+* Badge
+*/
+/**
+* Popover
+*/
+/**
+* Button tab
+*/
+/* alias */
+/**
+* Swiper
+*/
+/**
+* checklist
+*/
+/**
+* popup-picker
+*/
+/**
+* form-preview
+*/
+/**
+* load-more
+*/
+/**
+* popup
+*/
+/*@weuiCellsMarginTop: unit(20 /(@weuiCellFontSize * 100) , rem);*/
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-size: .24rem;
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a img {
+  border: 0;
+}
+a {
+  text-decoration: none;
+}
+html {
+  font-size: 50px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 56px;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 65px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 75px;
+  }
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 100px;
+  }
+}
+.m-1px,
+.m-1px-t,
+.m-1px-b,
+.m-1px-tb,
+.m-1px-l,
+.m-1px-r {
+  position: relative;
+}
+.m-1px:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  height: 1px;
+  border: 1px solid #C7C7C7;
+  color: #C7C7C7;
+  height: 200%;
+  transform-origin: left top;
+  transform: scale(0.5);
+}
+.m-1px-t:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+.m-1px-b:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+.m-1px-tb:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+.m-1px-tb:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+.m-1px-l:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 0 0;
+  transform: scaleX(0.5);
+}
+.m-1px-r:after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-right: 1px solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 100% 0;
+  transform: scaleX(0.5);
+}
+.m-center-v,
+.m-center-h,
+.m-center {
+  display: flex;
+}
+.m-center-v,
+.m-center {
+  align-items: center;
+}
+.m-center-h,
+.m-center {
+  justify-content: center;
+}
+.m-reddot,
+.m-reddot-border,
+.m-reddot-s {
+  position: relative;
+}
+.m-reddot:after,
+.m-reddot-border:after,
+.m-reddot-s:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: .11rem;
+  height: .11rem;
+  background-color: #f74c31;
+  border-radius: 100%;
+  right: -3px;
+  top: .1rem;
+  overflow: hidden;
+  background-clip: padding-box;
+}
+.m-reddot-border:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 5px;
+  right: -4px;
+  top: -4px;
+  background-clip: padding-box;
+  padding: 1px;
+}
+.m-reddot-s:after {
+  width: 6px;
+  height: 6px;
+  top: -5px;
+  right: -5px;
+}
+.m-fade-enter-active,
+.m-fade-leave-active {
+  opacity: 1;
+  transition: opacity linear 0.2s;
+}
+.m-fade-enter,
+.m-fade-leave-to {
+  opacity: 0;
+}
+.m-dialog-enter-active,
+.m-dialog-leave-active {
+  opacity: 1;
+  transition-duration: .4s;
+  transform: translate(-50%, -50%) scale(1) !important;
+  transition-property: transform, opacity!important;
+}
+.m-dialog-enter,
+.m-dialog-leave-to {
+  opacity: 0;
+}
+.m-dialog-enter {
+  transform: translate(-50%, -50%) scale(1.185) !important;
+}
+.m-dialog-leave-to {
+  transform: translate(-50%, -50%) scale(1) !important;
+}
+.m-loading {
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-name: m-loading;
+  animation-timing-function: linear;
+  border-radius: 99em;
+  border: 3px solid #DDD;
+  border-left-color: #666;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+  display: table-cell;
+  vertical-align: middle;
+}
+@keyframes m-loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.vux-close {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  color: #ccc;
+}
+.vux-close::before,
+.vux-close::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  background: #98979d;
+}
+.vux-close::before {
+  transform: rotate(45deg);
+}
+.vux-close::after {
+  transform: rotate(-45deg);
+}
+/**
+--------custom line width and color----------
+.vux-close-2px{
+  &::before,
+  &::after {
+    height: 2px;
+    margin-top: -1px;
+    background-color: green;
+  }
+}
+*/
+.m-tap-active {
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+}
+.m-tap-active:active {
+  background-color: #ECECEC;
+}
