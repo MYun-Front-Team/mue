@@ -63,7 +63,7 @@
       <ul class="syj-order_list">
         <li class="m-1px-b flexbox-normal">
           <a href="#/detail" class="syj-order_list_img">
-            <img src="https://myunonline-bizjia2.oss-cn-shanghai.aliyuncs.com/syj-lite-app/list-logo.png" alt="">
+            <img src="https://img14.360buyimg.com/jdcms/s440x440_jfs/t4423/38/791242384/246341/f6808bc5/58d47c8eN6ce6f64c.jpg!q90.webp" alt="">
           </a>
           <div class="syj-order_list_info">
             <h3 class="m-ellipsis-2l m-25-text m-normal-weight">商品名称商品名称商品名称商品名称商品名称商品名称称商品名称称</h3>
@@ -76,7 +76,7 @@
         </li>
         <li class="m-1px-b flexbox-normal">
           <a href="#/detail" class="syj-order_list_img">
-            <img src="https://myunonline-bizjia2.oss-cn-shanghai.aliyuncs.com/syj-lite-app/list-logo.png" alt="">
+            <img src="https://img11.360buyimg.com/jdcms/s440x440_jfs/t2755/289/308242991/265446/5c33728e/570e3506N1b3ae24a.jpg!q90.webp" alt="">
           </a>
           <div class="syj-order_list_info">
             <h3 class="m-ellipsis-2l m-25-text m-normal-weight">商品名称商品名</h3>
@@ -89,7 +89,7 @@
         </li>
         <li class="m-1px-b flexbox-normal">
           <a href="#/detail" class="syj-order_list_img">
-            <img src="https://myunonline-bizjia2.oss-cn-shanghai.aliyuncs.com/syj-lite-app/list-logo.png" alt="">
+            <img src="https://img13.360buyimg.com/jdcms/s440x440_jfs/t2692/47/2823083896/111880/5044cea1/5774c3b8Nc38eba5f.jpg!q90.webp" alt="">
           </a>
           <div class="syj-order_list_info">
             <h3 class="m-ellipsis-2l m-25-text m-normal-weight">商品名称商品名称商品名称商品名称商品名称商品名称称商品名称称</h3>

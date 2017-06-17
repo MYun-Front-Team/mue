@@ -31,10 +31,10 @@
 
       <div class="m-pad-24-b syj-goods_detail_content">
         <p class="m-img-auto">
-          <img src="http://myuntest-bizjia2.oss-cn-shanghai.aliyuncs.com/syj/msg/17887962804231927.jpg?x-oss-process=style/appresize" />
+          <img src="https://img20.360buyimg.com/vc/jfs/t1978/311/1784481950/160863/436fc230/56722581N901cbc54.jpg" />
         </p>
         <p class="m-img-auto">
-          <img  src="http://myuntest-bizjia2.oss-cn-shanghai.aliyuncs.com/syj/msg/7427677713154119.jpg?x-oss-process=style/appresize"/>
+          <img  src="https://img20.360buyimg.com/vc/jfs/t2137/278/1682635100/282207/1ad9216c/566fdb74N818784f6.jpg"/>
         </p>
 
       </div>

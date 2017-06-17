@@ -744,6 +744,7 @@ li {
 .message-has-cover .message-box {
   position: relative;
   z-index: 1;
+  max-height: 4.16rem;
 }
 .message-has-cover .message-content {
   background: #fff;

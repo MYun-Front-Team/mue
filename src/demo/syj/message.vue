@@ -39,7 +39,7 @@
             </div>
 
             <div class="message-box m-img-auto">
-              <img  src="http://myuntest-bizjia2.oss-cn-shanghai.aliyuncs.com/syj/msg/17887962804231927.jpg?x-oss-process=style/appresize" />
+              <img  src="https://m.360buyimg.com/babel/s386x520_jfs/t6286/192/799718983/37886/62b659b5/59456644N6e940c6c.jpg!q90" />
 
               <div class="message-content flexbox">
                 <div class="message-text m-26-text m-ellipsis-2l">集成吊顶行业年中大促，满9000减800，限购100份。速来抢购！集成吊顶行业年中大促 </div>
@@ -60,7 +60,7 @@
             </div>
 
             <div class="message-box m-img-auto">
-              <img  src="http://myuntest-bizjia2.oss-cn-shanghai.aliyuncs.com/syj/msg/7427677713154119.jpg?x-oss-process=style/appresize"/>
+              <img  src="https://img13.360buyimg.com/da/jfs/t6514/137/707967202/45242/c3b5d075/5943c961Ne2e01caa.jpg"/>
 
               <div class="message-content flexbox">
                 <div class="message-text m-26-font m-ellipsis-2l">集成吊顶行业年中大促</div>
