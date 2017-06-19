@@ -138,8 +138,6 @@
       style="padding: .24rem">
       <checker-item v-for="i in [1, 2, 3]" :key="i" :value="i">
         ￥{{i*300}}
-        <span></span>
-        <icon type="success-no-circle"></icon>
       </checker-item>
     </checker>
     <br/>
@@ -289,6 +287,8 @@
     border-color: #ff4a00;
     color: #ff4a00;
     font-weight: bold;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAvCAYAAACc5fiSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjM4Q0IzRjk0Q0Q1MTFFN0E3OTU5OEM1ODRFN0I0REUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjM4Q0IzRkE0Q0Q1MTFFN0E3OTU5OEM1ODRFN0I0REUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MzhDQjNGNzRDRDUxMUU3QTc5NTk4QzU4NEU3QjRERSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MzhDQjNGODRDRDUxMUU3QTc5NTk4QzU4NEU3QjRERSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pr8tNasAAAHuSURBVHja1Ji7TsMwFIbTEtKFZwAWFgYKYzuxMUAHJC4LMMEDMLAjnoCFCUYYKFNtJBASEmICKh6iLwALYuNyjuRKkeVcnPgkPpZ+pY6l6MvRZztu42NhPmDYppoBz/bAEfwe0uEGLiAr+CNkBC0ha+NOkyM0F3ChQ3MAH0B6poHQ80r3kgZDLk5zUEVkQfsInqqHr+C5oX1yXObRw7eKW0P7AC6KQNcNPrBx2hfHRRnousBlUT3qVEW4gK4avLQedYA7ha7KcelKjyorLiigqcFd6PEFOYR8VwXuAvoXsgw5VddPanAT9MjyGX+QDuRd9YeQdUpwaYA+g8xBLiyh32L3IsgR1aqiT0QEOIEcq/4BpAXZzdCjC3nVoPEl2hTgJj0Q/Fm7t6euJvgfVelhFrQrVZImIj77EbJhgL9MqHQcehLyYoJ2AS5zrB43Bnis+FWs3zU4jbosUeycNpsLwm+p67jtqPX5TnO6pSq9mPbARsE/9ouu09uQfsp4S71Em2LnLLO5XEM2E8aiNKfLgsug/I7YNzgf5dGjKLjLr7z4hJ3ImohlwCm+8hB+H3JrU2mbVcX5ISDWzqk+aymhyU5AJCcX6oOE8Bk6CdxbPdLAWUDrjuOytBowaQg+C3mCzASMGqoyzQ0a278AAwBzUmFK1qApSgAAAABJRU5ErkJggg==") no-repeat right bottom #fff;
+    background-size: .27rem .27rem;
     & span{ display: block}
     & .weui-icon-success-no-circle{ display: block;}
   }

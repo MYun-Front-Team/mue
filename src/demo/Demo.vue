@@ -34,6 +34,7 @@
     <router-link to="/ViewBox">ViewBox</router-link>
     <router-link to="/CellFormPreview">CellFormPreview</router-link>
     <router-link to="/FormPreview">FormPreview</router-link>
+    <router-link to="/Badge">Badge</router-link>
 
     <div style="clear: both;">
       <divider>Frequently Used Pages</divider>

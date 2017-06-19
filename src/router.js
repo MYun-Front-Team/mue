@@ -428,6 +428,15 @@ const routers = [
             resolve(require('./demo/address-list.vue'))
           })
         }
+      },
+      {
+        path: 'badge',
+        name: 'badge',
+        component (resolve) {
+          require.ensure(['./demo/badge.vue'], () => {
+            resolve(require('./demo/badge.vue'))
+          })
+        }
       }
     ]
   }
