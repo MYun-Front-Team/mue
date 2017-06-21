@@ -20,15 +20,15 @@
       </slot>
     </h1>
     <div class="mue-header-right">
-      <a class="mue-header-more" @click.prevent.stop="$emit('on-click-more')" v-if="rightOptions.showMore"></a>
       <slot name="right"></slot>
+      <a class="mue-header-more" @click.prevent.stop="$emit('on-click-more')" v-if="rightOptions.showMore"></a>
     </div>
   </div>
 </template>
 
 <script>
   import objectAssign from 'object-assign'
-  
+
   export default {
     props: {
       leftOptions: Object,
@@ -75,9 +75,9 @@
 
   .mue-header .mue-header-title, .mue-header h1 {
     margin: 0 1.5rem;
-    line-height: .8rem;
+    line-height: .78rem;
     text-align: center;
-    height: .8rem;
+    height: .78rem;
     font-size: .28rem;
     font-weight: 400;
     width: auto;

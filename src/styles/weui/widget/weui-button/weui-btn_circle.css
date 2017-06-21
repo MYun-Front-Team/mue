@@ -1,0 +1,97 @@
+/**
+* actionsheet
+*/
+/**
+* datetime
+*/
+/**
+* tabbar
+*/
+/**
+* tab
+*/
+/**
+* dialog
+*/
+/**
+* x-number
+*/
+/**
+* checkbox
+*/
+/**
+* check-icon
+*/
+/**
+* Cell
+*/
+/**
+* Mask
+*/
+/**
+* Range
+*/
+/**
+* Tabbar
+*/
+/**
+* Header
+*/
+/**
+* Timeline
+*/
+/**
+* Switch
+*/
+/**
+* Button
+*/
+/**
+* swipeout
+*/
+/**
+* Cell
+*/
+/**
+* Badge
+*/
+/**
+* Popover
+*/
+/**
+* Button tab
+*/
+/* alias */
+/**
+* Swiper
+*/
+/**
+* checklist
+*/
+/**
+* popup-picker
+*/
+/**
+* form-preview
+*/
+/**
+* load-more
+*/
+/**
+* popup
+*/
+/*@weuiCellsMarginTop: unit(20 /(@weuiCellFontSize * 100) , rem);*/
+.weui-btn_circle-primary,
+.weui-btn_circle-default,
+.weui-btn_circle-warn {
+  border-radius: 0.9rem;
+}
+.weui-btn_circle-primary:not(.weui-btn_mini),
+.weui-btn_circle-default:not(.weui-btn_mini),
+.weui-btn_circle-warn:not(.weui-btn_mini) {
+  height: 0.7rem;
+  line-height: 0.7rem;
+}
+.weui-btn_circle-default:after {
+  border-radius: 0.9rem;
+}

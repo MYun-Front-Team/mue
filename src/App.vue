@@ -27,7 +27,7 @@
   @import './styles/reset.less';
 
   body {
-    background-color: #efeff4;
+    background-color: #f1f5f8;
   }
   html,body{
     width: 100%;

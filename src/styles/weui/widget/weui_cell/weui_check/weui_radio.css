@@ -1,0 +1,92 @@
+/**
+* actionsheet
+*/
+/**
+* datetime
+*/
+/**
+* tabbar
+*/
+/**
+* tab
+*/
+/**
+* dialog
+*/
+/**
+* x-number
+*/
+/**
+* checkbox
+*/
+/**
+* check-icon
+*/
+/**
+* Cell
+*/
+/**
+* Mask
+*/
+/**
+* Range
+*/
+/**
+* Tabbar
+*/
+/**
+* Header
+*/
+/**
+* Timeline
+*/
+/**
+* Switch
+*/
+/**
+* Button
+*/
+/**
+* swipeout
+*/
+/**
+* Cell
+*/
+/**
+* Badge
+*/
+/**
+* Popover
+*/
+/**
+* Button tab
+*/
+/* alias */
+/**
+* Swiper
+*/
+/**
+* checklist
+*/
+/**
+* popup-picker
+*/
+/**
+* form-preview
+*/
+/**
+* load-more
+*/
+/**
+* popup
+*/
+/*@weuiCellsMarginTop: unit(20 /(@weuiCellFontSize * 100) , rem);*/
+.weui-cells_radio .weui-cell__ft {
+  padding-left: 0.35em;
+}
+.weui-cells_radio .weui-check:checked + .weui-icon-checked:before {
+  display: block;
+  content: '\EA08';
+  color: #09BB07;
+  font-size: .26rem;
+}

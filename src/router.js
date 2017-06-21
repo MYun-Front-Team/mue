@@ -13,7 +13,7 @@ const routers = [
     children: [
       {
         path: '',
-        redirect: '/Demo'
+        redirect: '/demo'
       },
       {
         path: 'Demo',
@@ -435,6 +435,42 @@ const routers = [
         component (resolve) {
           require.ensure(['./demo/badge.vue'], () => {
             resolve(require('./demo/badge.vue'))
+          })
+        }
+      },
+      {
+        path: 'user',
+        name: 'user',
+        component (resolve) {
+          require.ensure(['./demo/syj/user.vue'], () => {
+            resolve(require('./demo/syj/user.vue'))
+          })
+        }
+      },
+      {
+        path: 'message',
+        name: 'message',
+        component (resolve) {
+          require.ensure(['./demo/syj/message.vue'], () => {
+            resolve(require('./demo/syj/message.vue'))
+          })
+        }
+      },
+      {
+        path: 'order',
+        name: 'order',
+        component (resolve) {
+          require.ensure(['./demo/syj/order.vue'], () => {
+            resolve(require('./demo/syj/order.vue'))
+          })
+        }
+      },
+      {
+        path: 'detail',
+        name: 'detail',
+        component (resolve) {
+          require.ensure(['./demo/syj/goods-detail.vue'], () => {
+            resolve(require('./demo/syj/goods-detail.vue'))
           })
         }
       }

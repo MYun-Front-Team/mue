@@ -1,0 +1,109 @@
+/**
+* actionsheet
+*/
+/**
+* datetime
+*/
+/**
+* tabbar
+*/
+/**
+* tab
+*/
+/**
+* dialog
+*/
+/**
+* x-number
+*/
+/**
+* checkbox
+*/
+/**
+* check-icon
+*/
+/**
+* Cell
+*/
+/**
+* Mask
+*/
+/**
+* Range
+*/
+/**
+* Tabbar
+*/
+/**
+* Header
+*/
+/**
+* Timeline
+*/
+/**
+* Switch
+*/
+/**
+* Button
+*/
+/**
+* swipeout
+*/
+/**
+* Cell
+*/
+/**
+* Badge
+*/
+/**
+* Popover
+*/
+/**
+* Button tab
+*/
+/* alias */
+/**
+* Swiper
+*/
+/**
+* checklist
+*/
+/**
+* popup-picker
+*/
+/**
+* form-preview
+*/
+/**
+* load-more
+*/
+/**
+* popup
+*/
+/*@weuiCellsMarginTop: unit(20 /(@weuiCellFontSize * 100) , rem);*/
+.weui-btn_plain-primary {
+  color: #ffba00;
+  border: 1px solid #ffba00;
+}
+.weui-btn_plain-primary:not(.weui-btn_plain-disabled):active {
+  color: rgba(255, 186, 0, 0.6);
+  border-color: rgba(255, 186, 0, 0.6);
+}
+.weui-btn_plain-primary:after {
+  border-width: 0;
+}
+.weui-btn_plain-default {
+  color: #333333;
+  border: 1px solid #d3d3d3;
+}
+.weui-btn_plain-default:not(.weui-btn_plain-disabled):active {
+  color: rgba(211, 211, 211, 0.6);
+  border-color: rgba(211, 211, 211, 0.6);
+}
+.weui-btn_plain-default:after {
+  border-width: 0;
+}
+.weui-btn_plain-disabled {
+  color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
+}

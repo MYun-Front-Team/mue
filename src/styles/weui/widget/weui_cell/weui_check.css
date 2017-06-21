@@ -1,0 +1,115 @@
+/**
+* actionsheet
+*/
+/**
+* datetime
+*/
+/**
+* tabbar
+*/
+/**
+* tab
+*/
+/**
+* dialog
+*/
+/**
+* x-number
+*/
+/**
+* checkbox
+*/
+/**
+* check-icon
+*/
+/**
+* Cell
+*/
+/**
+* Mask
+*/
+/**
+* Range
+*/
+/**
+* Tabbar
+*/
+/**
+* Header
+*/
+/**
+* Timeline
+*/
+/**
+* Switch
+*/
+/**
+* Button
+*/
+/**
+* swipeout
+*/
+/**
+* Cell
+*/
+/**
+* Badge
+*/
+/**
+* Popover
+*/
+/**
+* Button tab
+*/
+/* alias */
+/**
+* Swiper
+*/
+/**
+* checklist
+*/
+/**
+* popup-picker
+*/
+/**
+* form-preview
+*/
+/**
+* load-more
+*/
+/**
+* popup
+*/
+/*@weuiCellsMarginTop: unit(20 /(@weuiCellFontSize * 100) , rem);*/
+.weui-check__label {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.weui-check__label:active {
+  background-color: #ECECEC;
+}
+.weui-check {
+  position: absolute;
+  left: -9999em;
+}
+.weui-cells_radio .weui-cell__ft {
+  padding-left: 0.35em;
+}
+.weui-cells_radio .weui-check:checked + .weui-icon-checked:before {
+  display: block;
+  content: '\EA08';
+  color: #09BB07;
+  font-size: .26rem;
+}
+.weui-cells_checkbox .weui-cell__hd {
+  padding-right: 0.35em;
+}
+.weui-cells_checkbox .weui-icon-checked:before {
+  content: '\EA01';
+  color: #C9C9C9;
+  font-size: .35rem;
+  display: block;
+}
+.weui-cells_checkbox .weui-check:checked + .weui-icon-checked:before {
+  content: '\EA06';
+  color: #09BB07;
+}
